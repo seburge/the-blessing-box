@@ -15,6 +15,6 @@ In repository Settings → Pages, select Deploy from a branch, main, and / (root
 - Release information and FAQ
 - Release signup and reviews link to the existing author website; no data is collected by this site
 
-Expected release: November 1, 2026. No purchase link is shown until available.
+Expected release: November 15, 2026. No purchase link is shown until available.
 
 Copyright 2026 Liv Fuller. All rights reserved. Illustrations by Quincy Battieste.
