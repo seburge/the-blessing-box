@@ -45,14 +45,20 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .birth-year-picker .birthday-confirmation{display:flex;align-items:flex-start;gap:10px;font:inherit;font-size:14px;margin:18px 0}
 .birthday-confirmation input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green)}
 .birthday-confirmation input:focus-visible{outline:3px solid var(--red);outline-offset:3px}
-.birth-year-picker .button{margin-top:16px;cursor:pointer}
+.birth-year-picker .button,.birth-year-picker .age-kids-link{box-sizing:border-box!important;width:180px!important;min-width:180px!important;max-width:180px!important;height:48px!important;padding:10px 25px;margin-left:auto;margin-right:auto;display:flex!important;align-items:center;justify-content:center;font-size:12px;line-height:28px}
+.birth-year-picker .button[type="submit"]{margin-top:16px;cursor:pointer}
+.birth-year-picker .age-kids-link{margin-top:14px;text-align:center;text-underline-offset:4px}
+@media(min-width:1px){.birth-year-picker .button,.birth-year-picker .age-kids-link{width:180px!important;height:48px!important;display:flex!important}}
+.parents-entry>.text-link,
+.parents-entry>p:last-of-type{text-align:center}
+.parents-entry>p:last-of-type .button{display:inline-flex;margin-inline:auto}
 .age-kids-link{display:block;font-size:12px;margin-top:14px;text-underline-offset:4px}
 .helpers-page{min-height:100svh;display:flex;flex-direction:column}
 .helpers-message{flex:1;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:55px 24px 75px;background:radial-gradient(ellipse at top,#e3f2f2,transparent 70%)}
 .helpers-star{font:100px/1 'EB Garamond',Georgia,serif;color:var(--red);margin-bottom:22px}
 .helpers-message h1{font-size:clamp(44px,7vw,88px);max-width:900px}
 .helpers-message>p:not(.eyebrow){max-width:520px;font-size:15px}
-.helpers-home{font-size:12px;margin-top:24px;text-underline-offset:5px}
+.helpers-home{display:flex;width:max-content;margin:24px auto 0;text-align:center}
 
 /* Christmas decorations stay clear of all interactive content. */
 .welcome{position:relative;isolation:isolate}
@@ -60,9 +66,8 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .snowfall span{position:absolute;top:-12px;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#fff;box-shadow:0 0 2px #718ca6;opacity:0;animation:snow-drift var(--duration) var(--delay) linear infinite}
 @keyframes snow-drift{0%{transform:translate3d(0,-12px,0);opacity:0}8%{opacity:.65}90%{opacity:.65}100%{transform:translate3d(var(--drift),calc(100vh + 24px),0);opacity:0}}
 .snowfall.is-paused span{animation-play-state:paused}
-.snow-toggle{position:absolute;right:20px;top:18px;border:1px solid var(--line);border-radius:3px;background:var(--cream);color:var(--ink);font-size:11px;padding:6px 10px;cursor:pointer;z-index:6}
-@media(max-width:720px){.snow-toggle{top:12px;right:14px}.snowfall span:nth-child(n+19){display:none}}
-@media(prefers-reduced-motion:reduce){.snowfall,.snow-toggle{display:none}.snowfall span{animation:none}}
+@media(max-width:720px){.snowfall span:nth-child(n+19){display:none}}
+@media(prefers-reduced-motion:reduce){.snowfall{display:none}.snowfall span{animation:none}}
 
 /* Evergreen swags frame every page without covering the navigation. */
 .evergreen-garland{width:100%;height:clamp(100px,11.12vw,160px);overflow:hidden;pointer-events:none;flex-shrink:0;background:var(--cream)}
@@ -84,20 +89,29 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .kids-page{flex:1;width:100%;max-width:1100px;margin:auto;padding:35px 24px 65px;text-align:center}
 .kids-page h1{font-size:clamp(44px,7vw,72px);margin-bottom:28px}
 .kids-tabs{display:flex;flex-wrap:nowrap;justify-content:center;gap:6px;border-bottom:4px solid #003580}
-.kids-tabs a{padding:10px 14px;border-radius:6px 6px 0 0;background:#9bbfe0;color:var(--ink);font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.kids-tabs a{flex:1 1 0;height:58px;display:flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:6px 6px 0 0;background:#9bbfe0;color:var(--ink);font-size:16px;font-weight:700;line-height:1.25;text-decoration:none;text-align:center;white-space:normal}
 .kids-tabs a[aria-selected="true"]{background:#003580;color:var(--cream)}
 .kids-tabs a:focus-visible{outline:3px solid var(--red);outline-offset:-4px}
 .kids-panel{padding:32px 16px}
 .kids-panel .helpers-illustration{margin:0 auto 22px}
 .kids-panel h2{font-size:clamp(36px,5vw,52px)}
-@media(max-width:720px){.kids-page{padding-left:10px;padding-right:10px}.kids-tabs{gap:3px}.kids-tabs a{padding:10px 4px;font-size:clamp(7px,1.8vw,12px)}}
+@media(max-width:720px){.kids-page{padding-left:10px;padding-right:10px}.kids-tabs{gap:3px}.kids-tabs a{min-height:64px;padding:10px 6px;font-size:clamp(11px,2.5vw,14px);line-height:1.25}}
 
 .kids-panel .books-page-cover{display:block;width:240px;max-width:100%;height:auto;margin:24px auto}
 .kids-panel .book-buy-button{display:inline-block;margin-bottom:24px}
 .kids-panel .book-buy-button img{display:block;max-width:100%;height:auto}
-.kids-panel .book-title-row h3{font:500 clamp(30px,4vw,44px)/1.2 'EB Garamond',Georgia,serif;margin:24px 0}
+.kids-panel .book-title-row h3{font:500 clamp(30px,4vw,44px)/1.2 'EB Garamond',Georgia,serif;margin:24px 0 10px}
+.kids-panel .book-byline,.kids-panel .book-illustrator{font-size:14px;line-height:1.4;margin:0 0 4px}
 .kids-panel .feature{margin-top:30px}
 .kids-panel .feature h3{font:500 32px/1.2 'EB Garamond',Georgia,serif}
+.parents-introduction{max-width:720px;margin:0 auto 28px;font-size:clamp(20px,2.5vw,28px);line-height:1.35}
+.parents-description{max-width:720px;margin:-14px auto 28px;font-size:14px;line-height:1.5}
+.parents-buy-link{display:flex;justify-content:flex-end;padding:16px 16px 0}
+.blessing-box-source{border:0;padding:0}
+.blessing-box-source legend{float:left;width:100%;text-align:left;font-weight:700;margin-bottom:12px}
+.blessing-box-source label{display:flex;align-items:flex-start;gap:10px;width:100%;padding:10px 0;clear:both;text-align:left;cursor:pointer}
+.blessing-box-source input{width:18px;height:18px;margin:3px 0 0;flex-shrink:0;accent-color:var(--green)}
+.signature{display:inline-block;font:italic 42px/1.1 'Brush Script MT','Segoe Script','Apple Chancery',cursive;letter-spacing:-1px;transform:rotate(-3deg)}
 
 .chapter-ending-illustration{display:block;width:100%;max-width:560px;height:auto;margin:32px auto 0}
 
@@ -114,6 +128,7 @@ footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
 .footer-box{justify-self:start;margin:0}
 .footer-author-logo{justify-self:end;margin:0}
 footer>.footer-copyright{font-size:14px;text-align:center;margin:0}
+.footer-copyright a{text-decoration:none}
 @media(max-width:720px){
  footer{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;padding:30px 4%}
  footer>.footer-copyright{font-size:12px;max-width:145px}

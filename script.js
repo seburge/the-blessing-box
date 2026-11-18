@@ -58,24 +58,9 @@ if (adultAgeCheck && birthYear) {
       window.location.assign('santas-big-helpers.html');
       return;
     }
-    adultContent.hidden = false;
-    const heading = adultContent.querySelector('h2');
-    heading.setAttribute('tabindex', '-1');
-    heading.focus();
+    window.location.assign('for-parents.html#parents-about');
   });
 }
-
-const snowfall = document.querySelector('.snowfall');
-const snowToggle = document.querySelector('.snow-toggle');
-if (snowfall && snowToggle) {
-  snowToggle.hidden = false;
-  snowToggle.addEventListener('click', () => {
-    const paused = snowfall.classList.toggle('is-paused');
-    snowToggle.setAttribute('aria-pressed', String(paused));
-    snowToggle.textContent = paused ? 'Resume snowfall' : 'Pause snowfall';
-  });
-}
-
 
 // Reveal the rest of the homepage when a visitor follows a section link.
 const siteContent = document.querySelector('#site-content');
@@ -95,7 +80,7 @@ if (siteContent) {
 
 const kidsTabs = document.querySelector('.kids-tabs');
 if (kidsTabs) {
-  const tabs = [...kidsTabs.querySelectorAll('a')];
+  const tabs = [...kidsTabs.querySelectorAll('a[href^="#"]')];
   const panels = tabs.map(tab => document.querySelector(tab.hash));
   kidsTabs.setAttribute('role', 'tablist');
   const selectTab = selected => {
@@ -137,6 +122,23 @@ if (kidsTabs) {
   };
   window.addEventListener('hashchange', selectLinkedTab);
   selectLinkedTab();
+
+  const parentsBuyLink = document.querySelector('.parents-buy-link');
+  if (parentsBuyLink) {
+    const updateParentsBuyLink = () => {
+      const selectedTab = tabs.find(tab => tab.getAttribute('aria-selected') === 'true');
+      const hiddenTabs = [
+        '#parents-meet-author',
+        '#parents-meet-illustrator',
+        '#parents-ask-santa',
+        '#parents-faq'
+      ];
+      parentsBuyLink.hidden = hiddenTabs.includes(selectedTab?.hash);
+    };
+    tabs.forEach(tab => tab.addEventListener('click', updateParentsBuyLink));
+    window.addEventListener('hashchange', updateParentsBuyLink);
+    updateParentsBuyLink();
+  }
 }
 
 const pawprintForm = document.querySelector('.pawprint-form');
@@ -150,6 +152,13 @@ if (pawprintForm) {
     event.preventDefault();
     if (!pawprintForm.reportValidity()) return;
     const count = countInput.valueAsNumber;
-    result.textContent = 'You counted ' + count + (count === 1 ? ' pawprint.' : ' pawprints.');
+    const answer = pawprintForm.dataset.answer ? Number(pawprintForm.dataset.answer) : null;
+    if (answer !== null) {
+      result.textContent = count === answer
+        ? 'Dasher’s delight! You found all ' + answer + ' paw prints.'
+        : 'Oh! Dear deer! Take another look and try again.';
+    } else {
+      result.textContent = 'You counted ' + count + (count === 1 ? ' paw print.' : ' paw prints.');
+    }
   });
 }

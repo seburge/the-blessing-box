@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#294381">
+<title>From Santa | The Blessing Box</title>
+<link rel="stylesheet" href="styles.css?v=from-santa-1">
+<script src="christmas-wish.js?v=from-santa-1" defer></script>
+</head>
+<body class="helpers-page">
+<a class="skip" href="#main">Skip to content</a>
+<a href="index.html" aria-label="The Blessing Box home"><img class="home-banner" src="assets/blessing-box-banner.jpg" alt="The Blessing Box" width="2157" height="409"></a>
+<main id="main" class="kids-page">
+<h1>From Santa</h1>
+<p style="max-width:740px;margin-inline:auto;text-align:left">Dasher’s delight! Thank you for your interest in Santa giving your special child the Blessing Box Experience this Christmas. Santa or one of his helpers will respond to your request as soon as possible.</p>
+<p style="max-width:740px;margin-inline:auto;text-align:left">Each Blessing Box Experience is $25 (plus tax and shipping) with a maximum of 4.</p>
+<form class="christmas-wish-form" name="christmas-wish-from-santa" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="christmas-wish-from-santa">
+<input type="hidden" name="wish-type" value="from-santa">
+<input type="hidden" name="blessing-box-source" value="Santa">
+<p hidden><label>Leave this field empty <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+<div class="wish-field"><label for="experience-count">How many Blessing Box Experiences do you want?</label><input id="experience-count" name="experience-count" type="number" min="1" max="4" step="1" inputmode="numeric" required></div>
+<div class="wish-field"><label for="wish-adult-name">Adult’s full name</label><input id="wish-adult-name" name="adult-full-name" type="text" maxlength="80" required></div>
+<div class="wish-field"><label for="wish-adult-email">Adult’s email address</label><input id="wish-adult-email" name="email" type="email" maxlength="254" required></div>
+<div class="wish-field"><label for="wish-adult-address">Adult’s mailing address</label><textarea id="wish-adult-address" name="adult-mailing-address" rows="4" maxlength="2000" required></textarea></div>
+<div class="wish-field"><label for="wish-adult-phone">Adult’s phone number</label><input id="wish-adult-phone" name="adult-phone" type="tel" maxlength="30" required></div>
+<button class="button green" type="submit">Send my request to Santa</button>
+</form>
+<p class="wish-status" role="status" aria-live="polite"></p>
+<p><a class="button green" href="for-parents.html#parents-ask-santa">Return to Ask for a Blessing Box</a></p>
+<p class="kids-home-link"><a class="button green" href="kids.html">Return to For Kids</a></p>
+</main>
+<hr class="kids-footer-divider">
+<footer>
+<a class="footer-box" href="index.html" aria-label="The Blessing Box home"><img src="assets/blessing-box-footer-transparent.png" alt="The sapphire blue Blessing Box decorated with stars and snowflakes" width="1535" height="1024" loading="lazy"></a>
+<p class="footer-copyright">© 2026 The Blessing Box, LLC<br><a href="https://livfullerauthor.netlify.app/">To learn more about the author, visit livfullerauthor.com</a><br>Illustrations by Quincy Battieste</p>
+<a class="footer-author-logo" href="https://livfullerauthor.netlify.app/" aria-label="Liv Fuller’s author website"><img src="assets/liv-fuller-footer-logo.png" alt="Liv Fuller Author. Always be you." width="1254" height="1254" loading="lazy"></a>
+</footer>
+</body>
+</html>

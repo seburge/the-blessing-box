@@ -3,8 +3,18 @@ const wishForm = document.querySelector('.christmas-wish-form');
 if (wishForm) {
   const submitButton = wishForm.querySelector('button[type="submit"]');
   const wishStatus = document.querySelector('.wish-status');
+  const sourceChoices = wishForm.querySelectorAll('input[name="blessing-box-source"]');
+  if (sourceChoices.length) {
+    wishForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!wishForm.reportValidity()) return;
+      const sourceChoice = wishForm.querySelector('input[name="blessing-box-source"]:checked');
+      if (sourceChoice?.value === 'Santa') window.location.assign('from-santa.html');
+      if (sourceChoice?.value === 'Someone other than Santa') window.location.assign('for-others.html');
+    });
+  }
 
-  wishForm.addEventListener('submit', async event => {
+  if (!sourceChoices.length) wishForm.addEventListener('submit', async event => {
     event.preventDefault();
     if (submitButton.disabled || !wishForm.reportValidity()) return;
 
