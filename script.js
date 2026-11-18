@@ -129,7 +129,14 @@ if (kidsTabs) {
       tabs[next].click();
     });
   });
-  selectTab(tabs.find(tab => tab.hash === window.location.hash) || tabs[0]);
+  const selectLinkedTab = () => {
+    const target = document.getElementById(window.location.hash.slice(1));
+    const panelIndex = panels.findIndex(panel => target && panel.contains(target));
+    selectTab(tabs[panelIndex] || tabs[0]);
+    if (target && panelIndex >= 0) target.scrollIntoView();
+  };
+  window.addEventListener('hashchange', selectLinkedTab);
+  selectLinkedTab();
 }
 
 const pawprintForm = document.querySelector('.pawprint-form');

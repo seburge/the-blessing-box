@@ -188,3 +188,21 @@ footer{padding-top:18px}
  .word-search-layout{grid-template-columns:minmax(0,1fr);gap:18px}
  .word-search-names{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;font-size:14px}
 }
+
+.game-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:24px 0}
+
+.kids-home-link{text-align:center;margin:28px 0 0;padding:0 16px}
+
+.christmas-wish-form{max-width:620px;margin:28px auto;text-align:left}
+.wish-field{margin-bottom:22px}
+.wish-field label{display:block;font-weight:700;margin-bottom:8px}
+.wish-field input,.wish-field textarea{display:block;width:100%;padding:12px;border:1px solid var(--green);border-radius:4px;background:var(--cream);color:var(--ink);font:inherit}
+.wish-field textarea{resize:vertical}
+.wish-permission{display:flex;align-items:flex-start;gap:12px;margin:24px 0}
+.wish-permission input{flex-shrink:0;width:22px;height:22px;margin-top:4px;accent-color:var(--green)}
+.christmas-wish-form input:focus-visible,.christmas-wish-form textarea:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.christmas-wish-form button{font:inherit;cursor:pointer}
+.christmas-wish-form button:disabled{opacity:.65;cursor:wait}
+.wish-status{max-width:620px;margin:16px auto;min-height:1.75em}
+
+.santa-introduction{text-align:left}

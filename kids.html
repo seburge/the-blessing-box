@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#294381">
 <title>For Kids | The Blessing Box</title>
-<link rel="stylesheet" href="styles.css?v=word-search-1">
-<script src="script.js?v=kids-tabs-1" defer></script>
+<link rel="stylesheet" href="styles.css?v=santa-introduction-1">
+<script src="script.js?v=game-links-1" defer></script>
 <script src="crossword.js?v=1" defer></script>
 <script src="word-search.js?v=1" defer></script>
+<script src="christmas-wish.js?v=1" defer></script>
 </head>
 <body class="helpers-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -84,8 +85,13 @@
 </section>
 <section id="games" class="kids-panel" aria-labelledby="tab-games">
 <h2>Games</h2>
+<div class="game-links">
+<a class="button green" href="#crossword-title">Fun Fact Crossward</a>
+<a class="button green" href="#word-search-title">Elfecutive Council Word Search</a>
+</div>
 <section class="fun-fact-crossword" aria-labelledby="crossword-title">
 <h3 id="crossword-title">Fun Fact Crossword</h3>
+<p>In <em>The Blessing Box</em>, Hugh loves to recite fun facts. See if you can remember them.</p>
 <p id="crossword-instructions">Enter one letter in each square. Use the arrow keys to move between squares.</p>
 <div class="crossword-scroll" tabindex="0" role="region" aria-label="Fun Fact Crossword grid" aria-describedby="crossword-instructions">
 <div class="crossword-grid">
@@ -198,6 +204,7 @@
 <hr class="game-divider">
 <section class="elfecutive-word-search" aria-labelledby="word-search-title">
 <h3 id="word-search-title">Elfecutive Council Word Search</h3>
+<p>In <em>The Blessing Box</em>, Santa appoints eight elves to serve on his Elfecutive Council, led by Everly Grace, CElfO. See if you can find all eight.</p>
 <p id="word-search-instructions">Find all eight names. Select the first letter, then the last letter of a name. Names can run across, down, diagonally, or backward. Spaces are left out.</p>
 <p class="word-search-keyboard">You can also use the arrow keys to move and Enter or Space to select a letter.</p>
 <div class="word-search-layout">
@@ -481,8 +488,38 @@
 </section>
 <section id="ask-santa" class="kids-panel" aria-labelledby="tab-santa">
 <h2>Ask Santa for a Blessing Box</h2>
-<p>More to explore here soon.</p>
+<p class="santa-introduction">In <em>The Blessing Box</em>, all Hugh wants for Christmas is a dog. But an out-of-sorts Santa has something else in mind. Santa's mysterious gift, called the Blessing Box, challenges Hugh to work for what he wants.</p>
+<p class="santa-introduction">Hugh doesn't like that idea one little bit, until he realizes it may be just the thing to help him prove to his parents he is ready for a dog of his own. So, he pet sits, mows lawns, earns his allowance, and works as hard as he can to make his dream come true.</p>
+<p class="santa-introduction">Christmas is about receiving gifts, but, as Hugh learns, Christmas is also about giving. Is there anything you really want for Christmas? What would you give to have it? If you want a Blessing Box challenge from Santa, please ask your parent or an adult to provide their email address and approve you sending your wish below.</p>
+<form class="christmas-wish-form" name="christmas-wish" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="christmas-wish">
+<input type="hidden" name="wish-type" value="christmas-wish">
+<p hidden><label>Leave this field empty <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+<div class="wish-field">
+<label for="wish-first-name">What is your first name?</label>
+<input id="wish-first-name" name="first-name" type="text" maxlength="80" required>
+</div>
+<div class="wish-field">
+<label for="christmas-wish">What do you really want for Christmas?</label>
+<textarea id="christmas-wish" name="christmas-wish" rows="4" maxlength="2000" required></textarea>
+</div>
+<div class="wish-field">
+<label for="wish-giving">What would you give to have it?</label>
+<textarea id="wish-giving" name="would-give" rows="4" maxlength="2000" required></textarea>
+</div>
+<div class="wish-field">
+<label for="wish-adult-email">An adult’s email address</label>
+<input id="wish-adult-email" name="email" type="email" maxlength="254" required>
+</div>
+<label class="wish-permission" for="wish-permission">
+<input id="wish-permission" name="adult-permission" type="checkbox" value="yes" required>
+<span>I have an adult’s permission to send my Christmas wish to Santa.</span>
+</label>
+<button class="button green" type="submit">Send my Christmas wish to Santa</button>
+</form>
+<p class="wish-status" role="status" aria-live="polite"></p>
 </section>
+<p class="kids-home-link"><a class="button green" href="index.html">Back to Home Page</a></p>
 </main>
 <hr class="kids-footer-divider">
 <footer>
