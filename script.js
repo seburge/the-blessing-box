@@ -75,3 +75,59 @@ if (snowfall && snowToggle) {
     snowToggle.textContent = paused ? 'Resume snowfall' : 'Pause snowfall';
   });
 }
+
+
+// Reveal the rest of the homepage when a visitor follows a section link.
+const siteContent = document.querySelector('#site-content');
+if (siteContent) {
+  const revealLinkedSection = () => {
+    const sectionId = window.location.hash.slice(1);
+    const section = document.getElementById(sectionId);
+    if (!section || !siteContent.contains(section)) return;
+    siteContent.hidden = false;
+    section.scrollIntoView();
+    section.setAttribute('tabindex', '-1');
+    section.focus({ preventScroll: true });
+  };
+  window.addEventListener('hashchange', revealLinkedSection);
+  revealLinkedSection();
+}
+
+const kidsTabs = document.querySelector('.kids-tabs');
+if (kidsTabs) {
+  const tabs = [...kidsTabs.querySelectorAll('a')];
+  const panels = tabs.map(tab => document.querySelector(tab.hash));
+  kidsTabs.setAttribute('role', 'tablist');
+  const selectTab = selected => {
+    tabs.forEach((tab, index) => {
+      const active = tab === selected;
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', panels[index].id);
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      panels[index].setAttribute('role', 'tabpanel');
+      panels[index].tabIndex = 0;
+      panels[index].hidden = !active;
+    });
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', event => {
+      event.preventDefault();
+      selectTab(tab);
+      history.replaceState(null, '', tab.hash);
+    });
+    tab.addEventListener('keydown', event => {
+      const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+      if (!keys.includes(event.key)) return;
+      event.preventDefault();
+      let next = index;
+      if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      tabs[next].focus();
+      tabs[next].click();
+    });
+  });
+  selectTab(tabs.find(tab => tab.hash === window.location.hash) || tabs[0]);
+}
