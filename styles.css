@@ -88,14 +88,14 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 
 .kids-page{flex:1;width:100%;max-width:1100px;margin:auto;padding:35px 24px 65px;text-align:center}
 .kids-page h1{font-size:clamp(44px,7vw,72px);margin-bottom:28px}
-.kids-tabs{display:flex;flex-wrap:nowrap;justify-content:center;gap:6px;border-bottom:4px solid #003580}
+.kids-tabs{display:flex;flex-wrap:nowrap;justify-content:center;gap:6px;border-bottom:4px solid #003580;overflow-x:auto}
 .kids-tabs a{flex:1 1 0;height:58px;display:flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:6px 6px 0 0;background:#9bbfe0;color:var(--ink);font-size:16px;font-weight:700;line-height:1.25;text-decoration:none;text-align:center;white-space:normal}
 .kids-tabs a[aria-selected="true"]{background:#003580;color:var(--cream)}
 .kids-tabs a:focus-visible{outline:3px solid var(--red);outline-offset:-4px}
 .kids-panel{padding:32px 16px}
 .kids-panel .helpers-illustration{margin:0 auto 22px}
 .kids-panel h2{font-size:clamp(36px,5vw,52px)}
-@media(max-width:720px){.kids-page{padding-left:10px;padding-right:10px}.kids-tabs{gap:3px}.kids-tabs a{min-height:64px;padding:10px 6px;font-size:clamp(11px,2.5vw,14px);line-height:1.25}}
+@media(max-width:720px){.kids-page{padding:24px 10px 45px}.kids-tabs{gap:3px}.kids-tabs a{flex:1 0 120px;min-height:64px;height:auto;padding:10px 6px;font-size:clamp(11px,2.5vw,14px);line-height:1.25}.kids-page h1{font-size:clamp(38px,12vw,56px)}.kids-panel{padding:24px 6px}.kids-panel h2{font-size:clamp(34px,10vw,48px)}.parents-description,.parents-introduction{padding-inline:6px}.parents-buy-link{justify-content:center;padding-inline:10px}.kids-footer-divider{width:calc(100% - 20px)}}
 
 .kids-panel .books-page-cover{display:block;width:240px;max-width:100%;height:auto;margin:24px auto}
 .kids-panel .book-buy-button{display:inline-block;margin-bottom:24px}
@@ -104,6 +104,8 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .kids-panel .book-byline,.kids-panel .book-illustrator{font-size:14px;line-height:1.4;margin:0 0 4px}
 .kids-panel .feature{margin-top:30px}
 .kids-panel .feature h3{font:500 32px/1.2 'EB Garamond',Georgia,serif}
+#parents-about{border:0;outline:0}
+#parents-about .book-description{border:0;outline:0}
 .parents-introduction{max-width:720px;margin:0 auto 28px;font-size:clamp(20px,2.5vw,28px);line-height:1.35}
 .parents-description{max-width:720px;margin:-14px auto 28px;font-size:14px;line-height:1.5}
 .parents-buy-link{display:flex;justify-content:flex-end;padding:16px 16px 0}
@@ -130,8 +132,10 @@ footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
 footer>.footer-copyright{font-size:14px;text-align:center;margin:0}
 .footer-copyright a{text-decoration:none}
 @media(max-width:720px){
- footer{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;padding:30px 4%}
- footer>.footer-copyright{font-size:12px;max-width:145px}
+ footer{grid-template-columns:1fr;gap:18px;padding:28px 5%}
+ footer>.footer-copyright{font-size:12px;max-width:280px;order:2}
+ footer>.footer-box{justify-self:center;order:1;width:180px}
+ footer>.footer-author-logo{justify-self:center;order:3;width:120px}
 }
 
 footer{padding-top:18px}
@@ -221,3 +225,24 @@ footer{padding-top:18px}
 .wish-status{max-width:620px;margin:16px auto;min-height:1.75em}
 
 .santa-introduction{text-align:left}
+.kids-panel ol{max-width:740px;margin:0 auto 22px;padding-left:24px;text-align:left}
+.kids-panel ol li{margin-bottom:12px}
+@media(max-width:720px){
+ body{font-size:15px}
+ .welcome-option h2{font-size:clamp(40px,14vw,50px)}
+ .welcome-option p{font-size:13px}
+ .welcome-picture{max-width:150px}
+ .parents-entry{padding:30px 16px 45px}
+ .birth-year-picker{padding:18px 14px}
+ .birth-year-picker .button,.birth-year-picker .age-kids-link{width:min(180px,100%)!important}
+ .blessing-box-source label{font-size:14px}
+ .christmas-wish-form{padding-inline:4px}
+ .christmas-wish-form button{width:100%;justify-content:center;text-align:center}
+ .button{max-width:100%;white-space:normal;text-align:center}
+ .bookmark-buttons{grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:20px 12px}
+ .chapter-text p{font-size:19px;line-height:1.55}
+ .chapter h1{font-size:clamp(42px,14vw,60px)}
+ .signature{font-size:36px}
+ .home-banner{object-fit:cover}
+ .book-description{overflow-wrap:anywhere}
+}
