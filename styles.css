@@ -114,6 +114,7 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .blessing-box-source label{display:flex;align-items:flex-start;gap:10px;width:100%;padding:10px 0;clear:both;text-align:left;cursor:pointer}
 .blessing-box-source input{width:18px;height:18px;margin:3px 0 0;flex-shrink:0;accent-color:var(--green)}
 .signature{display:inline-block;font:italic 42px/1.1 'Brush Script MT','Segoe Script','Apple Chancery',cursive;letter-spacing:-1px;transform:rotate(-3deg)}
+.experience-banner{display:block;width:100%;height:auto;margin:16px 0 24px;border-radius:6px}
 
 .chapter-ending-illustration{display:block;width:100%;max-width:560px;height:auto;margin:32px auto 0}
 
