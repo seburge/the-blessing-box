@@ -131,3 +131,18 @@ if (kidsTabs) {
   });
   selectTab(tabs.find(tab => tab.hash === window.location.hash) || tabs[0]);
 }
+
+const pawprintForm = document.querySelector('.pawprint-form');
+if (pawprintForm) {
+  const countInput = pawprintForm.querySelector('#pawprint-count');
+  const result = pawprintForm.querySelector('.pawprint-result');
+  countInput.addEventListener('input', () => {
+    result.textContent = '';
+  });
+  pawprintForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!pawprintForm.reportValidity()) return;
+    const count = countInput.valueAsNumber;
+    result.textContent = 'You counted ' + count + (count === 1 ? ' pawprint.' : ' pawprints.');
+  });
+}

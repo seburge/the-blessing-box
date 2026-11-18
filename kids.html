@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#294381">
 <title>For Kids | The Blessing Box</title>
-<link rel="stylesheet" href="styles.css?v=bookmark-buttons-1">
+<link rel="stylesheet" href="styles.css?v=word-search-1">
 <script src="script.js?v=kids-tabs-1" defer></script>
+<script src="crossword.js?v=1" defer></script>
+<script src="word-search.js?v=1" defer></script>
 </head>
 <body class="helpers-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -38,21 +40,444 @@
 <h2>Bookmarks &amp; Pawprints</h2>
 <h3>Which Blessing Box bookmark do you have?</h3>
 <div class="bookmark-buttons">
-  <button class="button green" type="button">Hugh</button>
-  <button class="button green" type="button">Missy</button>
-  <button class="button green" type="button">Everly Grace</button>
-  <button class="button green" type="button">Hasp</button>
-  <button class="button green" type="button">Pitch</button>
-  <button class="button green" type="button">Frank</button>
-  <button class="button green" type="button">Snowstorm Norm</button>
-  <button class="button green" type="button">Sprite</button>
-  <button class="button green" type="button">Thin Mint</button>
-  <button class="button green" type="button">Frosty the Bowman</button>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-hugh-no-tassel.png" alt="Hugh Blessing Box bookmark" width="763" height="2060" loading="lazy"></div>
+    <a class="button green" href="bookmark-hugh.html">Hugh</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-missy.png" alt="Missy Blessing Box bookmark" width="864" height="1821" loading="lazy"></div>
+    <a class="button green" href="bookmark-missy.html">Missy</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-everly-grace.png" alt="Everly Grace Blessing Box bookmark" width="724" height="2172" loading="lazy"></div>
+    <a class="button green" href="bookmark-everly-grace.html">Everly Grace</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-hasp.png" alt="Hasp Blessing Box bookmark" width="724" height="2172" loading="lazy"></div>
+    <a class="button green" href="bookmark-hasp.html">Hasp</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-pitch.png" alt="Pitch Blessing Box bookmark" width="864" height="1821" loading="lazy"></div>
+    <a class="button green" href="bookmark-pitch.html">Pitch</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-frank.png" alt="Frank Blessing Box bookmark" width="724" height="2172" loading="lazy"></div>
+    <a class="button green" href="bookmark-frank.html">Frank</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-snowstorm-norm.png" alt="Snowstorm Norm Blessing Box bookmark" width="724" height="2172" loading="lazy"></div>
+    <a class="button green" href="bookmark-snowstorm-norm.html">Snowstorm Norm</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-sprite.png" alt="Sprite Blessing Box bookmark" width="864" height="1821" loading="lazy"></div>
+    <a class="button green" href="bookmark-sprite.html">Sprite</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-thin-mint.png" alt="Thin Mint Blessing Box bookmark" width="864" height="1821" loading="lazy"></div>
+    <a class="button green" href="bookmark-thin-mint.html">Thin Mint</a>
+  </div>
+  <div class="bookmark-card">
+    <div class="bookmark-preview"><img src="assets/bookmark-frosty-the-bowman.png" alt="Frosty the Bowman Blessing Box bookmark" width="724" height="2172" loading="lazy"></div>
+    <a class="button green" href="bookmark-frosty-the-bowman.html">Frosty the Bowman</a>
+  </div>
 </div>
 </section>
 <section id="games" class="kids-panel" aria-labelledby="tab-games">
 <h2>Games</h2>
-<p>Games are coming soon.</p>
+<section class="fun-fact-crossword" aria-labelledby="crossword-title">
+<h3 id="crossword-title">Fun Fact Crossword</h3>
+<p id="crossword-instructions">Enter one letter in each square. Use the arrow keys to move between squares.</p>
+<div class="crossword-scroll" tabindex="0" role="region" aria-label="Fun Fact Crossword grid" aria-describedby="crossword-instructions">
+<div class="crossword-grid">
+<label class="crossword-cell" style="grid-row:1;grid-column:7"><span aria-hidden="true">1</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 1, column 7, word 1" data-answer="C" data-row="0" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:2;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 2, column 7" data-answer="H" data-row="1" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:3;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 3, column 7" data-answer="O" data-row="2" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:4;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 4, column 7" data-answer="C" data-row="3" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:5;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 5, column 7" data-answer="O" data-row="4" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:6;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 6, column 7" data-answer="L" data-row="5" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:6;grid-column:17"><span aria-hidden="true">2</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 6, column 17, word 2" data-answer="B" data-row="5" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:7;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 7, column 7" data-answer="A" data-row="6" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:7;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 7, column 17" data-answer="A" data-row="6" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 7" data-answer="T" data-row="7" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:14"><span aria-hidden="true">3</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 14, word 3" data-answer="F" data-row="7" data-col="13"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:15"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 15" data-answer="R" data-row="7" data-col="14"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:16"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 16" data-answer="A" data-row="7" data-col="15"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 17" data-answer="N" data-row="7" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:18"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 18" data-answer="K" data-row="7" data-col="17"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:19"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 19" data-answer="L" data-row="7" data-col="18"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:20"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 20" data-answer="I" data-row="7" data-col="19"></label>
+<label class="crossword-cell" style="grid-row:8;grid-column:21"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 8, column 21" data-answer="N" data-row="7" data-col="20"></label>
+<label class="crossword-cell" style="grid-row:9;grid-column:4"><span aria-hidden="true">4</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 9, column 4, word 4" data-answer="C" data-row="8" data-col="3"></label>
+<label class="crossword-cell" style="grid-row:9;grid-column:5"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 9, column 5" data-answer="O" data-row="8" data-col="4"></label>
+<label class="crossword-cell" style="grid-row:9;grid-column:6"><span aria-hidden="true">5</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 9, column 6, word 5" data-answer="D" data-row="8" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:9;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 9, column 7" data-answer="E" data-row="8" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:9;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 9, column 17" data-answer="G" data-row="8" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:6"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 6" data-answer="O" data-row="9" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:9"><span aria-hidden="true">6</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 9, word 6" data-answer="A" data-row="9" data-col="8"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:10"><span aria-hidden="true">7</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 10, word 7" data-answer="S" data-row="9" data-col="9"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:11"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 11" data-answer="P" data-row="9" data-col="10"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 17" data-answer="L" data-row="9" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:10;grid-column:23"><span aria-hidden="true">8</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 10, column 23, word 8" data-answer="V" data-row="9" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:2"><span aria-hidden="true">9</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 2, word 9" data-answer="G" data-row="10" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:6"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 6" data-answer="W" data-row="10" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:10"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 10" data-answer="L" data-row="10" data-col="9"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:15"><span aria-hidden="true">10</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 15, word 10" data-answer="C" data-row="10" data-col="14"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 17" data-answer="A" data-row="10" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:11;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 11, column 23" data-answer="I" data-row="10" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:2"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 2" data-answer="E" data-row="11" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:6"><span aria-hidden="true">12</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 6, word 12" data-answer="N" data-row="11" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:7"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 7" data-answer="E" data-row="11" data-col="6"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:8"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 8" data-answer="W" data-row="11" data-col="7"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:9"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 9" data-answer="F" data-row="11" data-col="8"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:10"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 10" data-answer="O" data-row="11" data-col="9"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:11"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 11" data-answer="U" data-row="11" data-col="10"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:12"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 12" data-answer="N" data-row="11" data-col="11"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:13"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 13" data-answer="D" data-row="11" data-col="12"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:14"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 14" data-answer="L" data-row="11" data-col="13"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:15"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 15" data-answer="A" data-row="11" data-col="14"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:16"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 16" data-answer="N" data-row="11" data-col="15"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 17" data-answer="D" data-row="11" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:12;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 12, column 23" data-answer="N" data-row="11" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:1"><span aria-hidden="true">13</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 1, word 13" data-answer="M" data-row="12" data-col="0"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:2"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 2" data-answer="O" data-row="12" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:3"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 3" data-answer="N" data-row="12" data-col="2"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:4"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 4" data-answer="K" data-row="12" data-col="3"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:5"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 5" data-answer="E" data-row="12" data-col="4"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:6"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 6" data-answer="Y" data-row="12" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:10"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 10" data-answer="T" data-row="12" data-col="9"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:15"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 15" data-answer="T" data-row="12" data-col="14"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:17"><span aria-hidden="true">14</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 17, word 14" data-answer="E" data-row="12" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:18"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 18" data-answer="I" data-row="12" data-col="17"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:19"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 19" data-answer="G" data-row="12" data-col="18"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:20"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 20" data-answer="H" data-row="12" data-col="19"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:21"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 21" data-answer="T" data-row="12" data-col="20"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:22"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 22" data-answer="E" data-row="12" data-col="21"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 23" data-answer="E" data-row="12" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:13;grid-column:24"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 13, column 24" data-answer="N" data-row="12" data-col="23"></label>
+<label class="crossword-cell" style="grid-row:14;grid-column:2"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 14, column 2" data-answer="S" data-row="13" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:14;grid-column:10"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 14, column 10" data-answer="H" data-row="13" data-col="9"></label>
+<label class="crossword-cell" style="grid-row:14;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 14, column 17" data-answer="S" data-row="13" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:14;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 14, column 23" data-answer="G" data-row="13" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:2"><span aria-hidden="true">15</span><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 2, word 15" data-answer="M" data-row="14" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:3"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 3" data-answer="U" data-row="14" data-col="2"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:4"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 4" data-answer="S" data-row="14" data-col="3"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:5"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 5" data-answer="K" data-row="14" data-col="4"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:6"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 6" data-answer="Y" data-row="14" data-col="5"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:17"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 17" data-answer="H" data-row="14" data-col="16"></label>
+<label class="crossword-cell" style="grid-row:15;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 15, column 23" data-answer="A" data-row="14" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:16;grid-column:2"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 16, column 2" data-answer="I" data-row="15" data-col="1"></label>
+<label class="crossword-cell" style="grid-row:16;grid-column:23"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 16, column 23" data-answer="R" data-row="15" data-col="22"></label>
+<label class="crossword-cell" style="grid-row:17;grid-column:2"><input type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row 17, column 2" data-answer="N" data-row="16" data-col="1"></label>
+</div>
+</div>
+<div class="crossword-clues">
+<h4>Across</h4>
+<p><strong>3.</strong> Last name of President on the $100 bill</p>
+<p><strong>4.</strong> 0-7-0-6 is Tyler’s garage <span class="clue-blank" style="width:7ch" role="img" aria-label="blank"></span></p>
+<p><strong>6.</strong> Type of snake that killed Cleopatra</p>
+<p><strong>12.</strong> Type of dog Tyler got for Christmas</p>
+<p><strong>13.</strong> Animal that eats a banana like a Popsicle</p>
+<p><strong>14.</strong> Number of miles across the Grand Canyon at its widest as a crow flies</p>
+<p><strong>15.</strong> Smell of dad’s and Santa’s cologne</p>
+<h4>Down</h4>
+<p><strong>1.</strong> <span class="clue-blank" style="width:5ch" role="img" aria-label="blank"></span> is toxic to dogs. The darker, the greater the risk.</p>
+<p><strong>2.</strong> Rudolph’s baby collar has red and green stones like the colors of the flag of <span class="clue-blank" style="width:5ch" role="img" aria-label="blank"></span></p>
+<p><strong>5.</strong> Type of woodpecker with a tongue up to four inches long</p>
+<p><strong>7.</strong> Slowest mammal with a top speed of 0.15 miles per hour</p>
+<p><strong>8.</strong> Liquid used for over 7,000 years and found in ancient Egyptian tombs</p>
+<p><strong>9.</strong> Chemical partly responsible for earthy smell when it rains</p>
+<p><strong>10.</strong> This animal’s ear has 32 muscles and can turn 180 degrees</p>
+</div>
+<div class="crossword-actions">
+<button class="button green" type="button" data-crossword-action="check">Check answers</button>
+<button class="button green" type="button" data-crossword-action="reveal">Show answers</button>
+<button class="button green" type="button" data-crossword-action="clear">Clear grid</button>
+</div>
+<p class="crossword-status" role="status" aria-live="polite"></p>
+</section>
+<hr class="game-divider">
+<section class="elfecutive-word-search" aria-labelledby="word-search-title">
+<h3 id="word-search-title">Elfecutive Council Word Search</h3>
+<p id="word-search-instructions">Find all eight names. Select the first letter, then the last letter of a name. Names can run across, down, diagonally, or backward. Spaces are left out.</p>
+<p class="word-search-keyboard">You can also use the arrow keys to move and Enter or Space to select a letter.</p>
+<div class="word-search-layout">
+<div class="word-search-scroll" role="region" aria-label="Elfecutive Council letter grid" tabindex="0">
+<div class="word-search-grid" data-size="16" role="group" aria-describedby="word-search-instructions">
+<button type="button" class="word-search-cell" data-index="0" tabindex="0" aria-label="W, row 1, column 1" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="1" tabindex="-1" aria-label="H, row 1, column 2" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="2" tabindex="-1" aria-label="G, row 1, column 3" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="3" tabindex="-1" aria-label="D, row 1, column 4" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="4" tabindex="-1" aria-label="Y, row 1, column 5" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="5" tabindex="-1" aria-label="D, row 1, column 6" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="6" tabindex="-1" aria-label="W, row 1, column 7" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="7" tabindex="-1" aria-label="W, row 1, column 8" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="8" tabindex="-1" aria-label="J, row 1, column 9" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="9" tabindex="-1" aria-label="N, row 1, column 10" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="10" tabindex="-1" aria-label="X, row 1, column 11" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="11" tabindex="-1" aria-label="W, row 1, column 12" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="12" tabindex="-1" aria-label="H, row 1, column 13" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="13" tabindex="-1" aria-label="B, row 1, column 14" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="14" tabindex="-1" aria-label="F, row 1, column 15" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="15" tabindex="-1" aria-label="V, row 1, column 16" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="16" tabindex="-1" aria-label="Y, row 2, column 1" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="17" tabindex="-1" aria-label="Y, row 2, column 2" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="18" tabindex="-1" aria-label="Y, row 2, column 3" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="19" tabindex="-1" aria-label="T, row 2, column 4" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="20" tabindex="-1" aria-label="N, row 2, column 5" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="21" tabindex="-1" aria-label="I, row 2, column 6" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="22" tabindex="-1" aria-label="M, row 2, column 7" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="23" tabindex="-1" aria-label="N, row 2, column 8" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="24" tabindex="-1" aria-label="I, row 2, column 9" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="25" tabindex="-1" aria-label="H, row 2, column 10" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="26" tabindex="-1" aria-label="T, row 2, column 11" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="27" tabindex="-1" aria-label="H, row 2, column 12" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="28" tabindex="-1" aria-label="N, row 2, column 13" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="29" tabindex="-1" aria-label="S, row 2, column 14" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="30" tabindex="-1" aria-label="U, row 2, column 15" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="31" tabindex="-1" aria-label="A, row 2, column 16" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="32" tabindex="-1" aria-label="S, row 3, column 1" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="33" tabindex="-1" aria-label="T, row 3, column 2" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="34" tabindex="-1" aria-label="E, row 3, column 3" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="35" tabindex="-1" aria-label="V, row 3, column 4" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="36" tabindex="-1" aria-label="G, row 3, column 5" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="37" tabindex="-1" aria-label="J, row 3, column 6" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="38" tabindex="-1" aria-label="E, row 3, column 7" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="39" tabindex="-1" aria-label="U, row 3, column 8" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="40" tabindex="-1" aria-label="N, row 3, column 9" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="41" tabindex="-1" aria-label="U, row 3, column 10" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="42" tabindex="-1" aria-label="G, row 3, column 11" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="43" tabindex="-1" aria-label="F, row 3, column 12" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="44" tabindex="-1" aria-label="J, row 3, column 13" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="45" tabindex="-1" aria-label="B, row 3, column 14" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="46" tabindex="-1" aria-label="F, row 3, column 15" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="47" tabindex="-1" aria-label="N, row 3, column 16" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="48" tabindex="-1" aria-label="M, row 4, column 1" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="49" tabindex="-1" aria-label="M, row 4, column 2" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="50" tabindex="-1" aria-label="T, row 4, column 3" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="51" tabindex="-1" aria-label="S, row 4, column 4" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="52" tabindex="-1" aria-label="B, row 4, column 5" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="53" tabindex="-1" aria-label="V, row 4, column 6" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="54" tabindex="-1" aria-label="R, row 4, column 7" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="55" tabindex="-1" aria-label="V, row 4, column 8" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="56" tabindex="-1" aria-label="H, row 4, column 9" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="57" tabindex="-1" aria-label="X, row 4, column 10" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="58" tabindex="-1" aria-label="I, row 4, column 11" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="59" tabindex="-1" aria-label="G, row 4, column 12" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="60" tabindex="-1" aria-label="J, row 4, column 13" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="61" tabindex="-1" aria-label="A, row 4, column 14" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="62" tabindex="-1" aria-label="B, row 4, column 15" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="63" tabindex="-1" aria-label="E, row 4, column 16" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="64" tabindex="-1" aria-label="P, row 5, column 1" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="65" tabindex="-1" aria-label="I, row 5, column 2" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="66" tabindex="-1" aria-label="I, row 5, column 3" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="67" tabindex="-1" aria-label="P, row 5, column 4" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="68" tabindex="-1" aria-label="Z, row 5, column 5" aria-pressed="false">Z</button>
+<button type="button" class="word-search-cell" data-index="69" tabindex="-1" aria-label="Y, row 5, column 6" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="70" tabindex="-1" aria-label="U, row 5, column 7" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="71" tabindex="-1" aria-label="X, row 5, column 8" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="72" tabindex="-1" aria-label="Q, row 5, column 9" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="73" tabindex="-1" aria-label="M, row 5, column 10" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="74" tabindex="-1" aria-label="N, row 5, column 11" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="75" tabindex="-1" aria-label="H, row 5, column 12" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="76" tabindex="-1" aria-label="C, row 5, column 13" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="77" tabindex="-1" aria-label="T, row 5, column 14" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="78" tabindex="-1" aria-label="I, row 5, column 15" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="79" tabindex="-1" aria-label="P, row 5, column 16" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="80" tabindex="-1" aria-label="S, row 6, column 1" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="81" tabindex="-1" aria-label="A, row 6, column 2" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="82" tabindex="-1" aria-label="R, row 6, column 3" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="83" tabindex="-1" aria-label="K, row 6, column 4" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="84" tabindex="-1" aria-label="A, row 6, column 5" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="85" tabindex="-1" aria-label="Z, row 6, column 6" aria-pressed="false">Z</button>
+<button type="button" class="word-search-cell" data-index="86" tabindex="-1" aria-label="B, row 6, column 7" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="87" tabindex="-1" aria-label="B, row 6, column 8" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="88" tabindex="-1" aria-label="B, row 6, column 9" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="89" tabindex="-1" aria-label="K, row 6, column 10" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="90" tabindex="-1" aria-label="G, row 6, column 11" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="91" tabindex="-1" aria-label="G, row 6, column 12" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="92" tabindex="-1" aria-label="I, row 6, column 13" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="93" tabindex="-1" aria-label="N, row 6, column 14" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="94" tabindex="-1" aria-label="S, row 6, column 15" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="95" tabindex="-1" aria-label="Q, row 6, column 16" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="96" tabindex="-1" aria-label="X, row 7, column 1" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="97" tabindex="-1" aria-label="O, row 7, column 2" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="98" tabindex="-1" aria-label="P, row 7, column 3" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="99" tabindex="-1" aria-label="D, row 7, column 4" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="100" tabindex="-1" aria-label="E, row 7, column 5" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="101" tabindex="-1" aria-label="V, row 7, column 6" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="102" tabindex="-1" aria-label="E, row 7, column 7" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="103" tabindex="-1" aria-label="R, row 7, column 8" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="104" tabindex="-1" aria-label="L, row 7, column 9" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="105" tabindex="-1" aria-label="Y, row 7, column 10" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="106" tabindex="-1" aria-label="G, row 7, column 11" aria-pressed="false">G</button>
+<button type="button" class="word-search-cell" data-index="107" tabindex="-1" aria-label="R, row 7, column 12" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="108" tabindex="-1" aria-label="A, row 7, column 13" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="109" tabindex="-1" aria-label="C, row 7, column 14" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="110" tabindex="-1" aria-label="E, row 7, column 15" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="111" tabindex="-1" aria-label="D, row 7, column 16" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="112" tabindex="-1" aria-label="S, row 8, column 1" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="113" tabindex="-1" aria-label="Q, row 8, column 2" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="114" tabindex="-1" aria-label="S, row 8, column 3" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="115" tabindex="-1" aria-label="E, row 8, column 4" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="116" tabindex="-1" aria-label="A, row 8, column 5" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="117" tabindex="-1" aria-label="J, row 8, column 6" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="118" tabindex="-1" aria-label="M, row 8, column 7" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="119" tabindex="-1" aria-label="B, row 8, column 8" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="120" tabindex="-1" aria-label="P, row 8, column 9" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="121" tabindex="-1" aria-label="S, row 8, column 10" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="122" tabindex="-1" aria-label="A, row 8, column 11" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="123" tabindex="-1" aria-label="H, row 8, column 12" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="124" tabindex="-1" aria-label="P, row 8, column 13" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="125" tabindex="-1" aria-label="Y, row 8, column 14" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="126" tabindex="-1" aria-label="E, row 8, column 15" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="127" tabindex="-1" aria-label="W, row 8, column 16" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="128" tabindex="-1" aria-label="O, row 9, column 1" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="129" tabindex="-1" aria-label="P, row 9, column 2" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="130" tabindex="-1" aria-label="C, row 9, column 3" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="131" tabindex="-1" aria-label="P, row 9, column 4" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="132" tabindex="-1" aria-label="O, row 9, column 5" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="133" tabindex="-1" aria-label="T, row 9, column 6" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="134" tabindex="-1" aria-label="W, row 9, column 7" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="135" tabindex="-1" aria-label="O, row 9, column 8" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="136" tabindex="-1" aria-label="E, row 9, column 9" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="137" tabindex="-1" aria-label="O, row 9, column 10" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="138" tabindex="-1" aria-label="W, row 9, column 11" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="139" tabindex="-1" aria-label="D, row 9, column 12" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="140" tabindex="-1" aria-label="Q, row 9, column 13" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="141" tabindex="-1" aria-label="H, row 9, column 14" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="142" tabindex="-1" aria-label="U, row 9, column 15" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="143" tabindex="-1" aria-label="F, row 9, column 16" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="144" tabindex="-1" aria-label="T, row 10, column 1" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="145" tabindex="-1" aria-label="C, row 10, column 2" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="146" tabindex="-1" aria-label="Q, row 10, column 3" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="147" tabindex="-1" aria-label="D, row 10, column 4" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="148" tabindex="-1" aria-label="R, row 10, column 5" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="149" tabindex="-1" aria-label="Z, row 10, column 6" aria-pressed="false">Z</button>
+<button type="button" class="word-search-cell" data-index="150" tabindex="-1" aria-label="Y, row 10, column 7" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="151" tabindex="-1" aria-label="A, row 10, column 8" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="152" tabindex="-1" aria-label="P, row 10, column 9" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="153" tabindex="-1" aria-label="H, row 10, column 10" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="154" tabindex="-1" aria-label="U, row 10, column 11" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="155" tabindex="-1" aria-label="A, row 10, column 12" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="156" tabindex="-1" aria-label="R, row 10, column 13" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="157" tabindex="-1" aria-label="D, row 10, column 14" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="158" tabindex="-1" aria-label="Y, row 10, column 15" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="159" tabindex="-1" aria-label="R, row 10, column 16" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="160" tabindex="-1" aria-label="N, row 11, column 1" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="161" tabindex="-1" aria-label="A, row 11, column 2" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="162" tabindex="-1" aria-label="M, row 11, column 3" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="163" tabindex="-1" aria-label="W, row 11, column 4" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="164" tabindex="-1" aria-label="O, row 11, column 5" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="165" tabindex="-1" aria-label="B, row 11, column 6" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="166" tabindex="-1" aria-label="E, row 11, column 7" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="167" tabindex="-1" aria-label="H, row 11, column 8" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="168" tabindex="-1" aria-label="T, row 11, column 9" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="169" tabindex="-1" aria-label="Y, row 11, column 10" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="170" tabindex="-1" aria-label="T, row 11, column 11" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="171" tabindex="-1" aria-label="S, row 11, column 12" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="172" tabindex="-1" aria-label="O, row 11, column 13" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="173" tabindex="-1" aria-label="R, row 11, column 14" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="174" tabindex="-1" aria-label="F, row 11, column 15" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="175" tabindex="-1" aria-label="A, row 11, column 16" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="176" tabindex="-1" aria-label="S, row 12, column 1" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="177" tabindex="-1" aria-label="L, row 12, column 2" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="178" tabindex="-1" aria-label="N, row 12, column 3" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="179" tabindex="-1" aria-label="A, row 12, column 4" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="180" tabindex="-1" aria-label="S, row 12, column 5" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="181" tabindex="-1" aria-label="W, row 12, column 6" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="182" tabindex="-1" aria-label="E, row 12, column 7" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="183" tabindex="-1" aria-label="J, row 12, column 8" aria-pressed="false">J</button>
+<button type="button" class="word-search-cell" data-index="184" tabindex="-1" aria-label="Z, row 12, column 9" aria-pressed="false">Z</button>
+<button type="button" class="word-search-cell" data-index="185" tabindex="-1" aria-label="V, row 12, column 10" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="186" tabindex="-1" aria-label="B, row 12, column 11" aria-pressed="false">B</button>
+<button type="button" class="word-search-cell" data-index="187" tabindex="-1" aria-label="X, row 12, column 12" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="188" tabindex="-1" aria-label="T, row 12, column 13" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="189" tabindex="-1" aria-label="L, row 12, column 14" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="190" tabindex="-1" aria-label="L, row 12, column 15" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="191" tabindex="-1" aria-label="N, row 12, column 16" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="192" tabindex="-1" aria-label="A, row 13, column 1" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="193" tabindex="-1" aria-label="D, row 13, column 2" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="194" tabindex="-1" aria-label="Q, row 13, column 3" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="195" tabindex="-1" aria-label="N, row 13, column 4" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="196" tabindex="-1" aria-label="P, row 13, column 5" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="197" tabindex="-1" aria-label="E, row 13, column 6" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="198" tabindex="-1" aria-label="Z, row 13, column 7" aria-pressed="false">Z</button>
+<button type="button" class="word-search-cell" data-index="199" tabindex="-1" aria-label="O, row 13, column 8" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="200" tabindex="-1" aria-label="L, row 13, column 9" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="201" tabindex="-1" aria-label="K, row 13, column 10" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="202" tabindex="-1" aria-label="P, row 13, column 11" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="203" tabindex="-1" aria-label="S, row 13, column 12" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="204" tabindex="-1" aria-label="K, row 13, column 13" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="205" tabindex="-1" aria-label="S, row 13, column 14" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="206" tabindex="-1" aria-label="H, row 13, column 15" aria-pressed="false">H</button>
+<button type="button" class="word-search-cell" data-index="207" tabindex="-1" aria-label="K, row 13, column 16" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="208" tabindex="-1" aria-label="R, row 14, column 1" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="209" tabindex="-1" aria-label="P, row 14, column 2" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="210" tabindex="-1" aria-label="K, row 14, column 3" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="211" tabindex="-1" aria-label="X, row 14, column 4" aria-pressed="false">X</button>
+<button type="button" class="word-search-cell" data-index="212" tabindex="-1" aria-label="F, row 14, column 5" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="213" tabindex="-1" aria-label="P, row 14, column 6" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="214" tabindex="-1" aria-label="U, row 14, column 7" aria-pressed="false">U</button>
+<button type="button" class="word-search-cell" data-index="215" tabindex="-1" aria-label="R, row 14, column 8" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="216" tabindex="-1" aria-label="N, row 14, column 9" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="217" tabindex="-1" aria-label="V, row 14, column 10" aria-pressed="false">V</button>
+<button type="button" class="word-search-cell" data-index="218" tabindex="-1" aria-label="N, row 14, column 11" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="219" tabindex="-1" aria-label="C, row 14, column 12" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="220" tabindex="-1" aria-label="F, row 14, column 13" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="221" tabindex="-1" aria-label="P, row 14, column 14" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="222" tabindex="-1" aria-label="A, row 14, column 15" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="223" tabindex="-1" aria-label="W, row 14, column 16" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="224" tabindex="-1" aria-label="F, row 15, column 1" aria-pressed="false">F</button>
+<button type="button" class="word-search-cell" data-index="225" tabindex="-1" aria-label="Y, row 15, column 2" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="226" tabindex="-1" aria-label="W, row 15, column 3" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="227" tabindex="-1" aria-label="C, row 15, column 4" aria-pressed="false">C</button>
+<button type="button" class="word-search-cell" data-index="228" tabindex="-1" aria-label="L, row 15, column 5" aria-pressed="false">L</button>
+<button type="button" class="word-search-cell" data-index="229" tabindex="-1" aria-label="P, row 15, column 6" aria-pressed="false">P</button>
+<button type="button" class="word-search-cell" data-index="230" tabindex="-1" aria-label="K, row 15, column 7" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="231" tabindex="-1" aria-label="Q, row 15, column 8" aria-pressed="false">Q</button>
+<button type="button" class="word-search-cell" data-index="232" tabindex="-1" aria-label="D, row 15, column 9" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="233" tabindex="-1" aria-label="E, row 15, column 10" aria-pressed="false">E</button>
+<button type="button" class="word-search-cell" data-index="234" tabindex="-1" aria-label="I, row 15, column 11" aria-pressed="false">I</button>
+<button type="button" class="word-search-cell" data-index="235" tabindex="-1" aria-label="K, row 15, column 12" aria-pressed="false">K</button>
+<button type="button" class="word-search-cell" data-index="236" tabindex="-1" aria-label="O, row 15, column 13" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="237" tabindex="-1" aria-label="D, row 15, column 14" aria-pressed="false">D</button>
+<button type="button" class="word-search-cell" data-index="238" tabindex="-1" aria-label="M, row 15, column 15" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="239" tabindex="-1" aria-label="T, row 15, column 16" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="240" tabindex="-1" aria-label="S, row 16, column 1" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="241" tabindex="-1" aria-label="Y, row 16, column 2" aria-pressed="false">Y</button>
+<button type="button" class="word-search-cell" data-index="242" tabindex="-1" aria-label="A, row 16, column 3" aria-pressed="false">A</button>
+<button type="button" class="word-search-cell" data-index="243" tabindex="-1" aria-label="M, row 16, column 4" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="244" tabindex="-1" aria-label="R, row 16, column 5" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="245" tabindex="-1" aria-label="O, row 16, column 6" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="246" tabindex="-1" aria-label="N, row 16, column 7" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="247" tabindex="-1" aria-label="M, row 16, column 8" aria-pressed="false">M</button>
+<button type="button" class="word-search-cell" data-index="248" tabindex="-1" aria-label="R, row 16, column 9" aria-pressed="false">R</button>
+<button type="button" class="word-search-cell" data-index="249" tabindex="-1" aria-label="O, row 16, column 10" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="250" tabindex="-1" aria-label="T, row 16, column 11" aria-pressed="false">T</button>
+<button type="button" class="word-search-cell" data-index="251" tabindex="-1" aria-label="S, row 16, column 12" aria-pressed="false">S</button>
+<button type="button" class="word-search-cell" data-index="252" tabindex="-1" aria-label="W, row 16, column 13" aria-pressed="false">W</button>
+<button type="button" class="word-search-cell" data-index="253" tabindex="-1" aria-label="O, row 16, column 14" aria-pressed="false">O</button>
+<button type="button" class="word-search-cell" data-index="254" tabindex="-1" aria-label="N, row 16, column 15" aria-pressed="false">N</button>
+<button type="button" class="word-search-cell" data-index="255" tabindex="-1" aria-label="S, row 16, column 16" aria-pressed="false">S</button>
+</div>
+</div>
+<ul class="word-search-names" aria-label="Names to find">
+<li data-word="EVERLYGRACE" data-path="100,101,102,103,104,105,106,107,108,109,110">Everly Grace</li>
+<li data-word="HASP" data-path="123,122,121,120">Hasp</li>
+<li data-word="PITCH" data-path="79,78,77,76,75">Pitch</li>
+<li data-word="FRANK" data-path="143,159,175,191,207">Frank</li>
+<li data-word="SPRITE" data-path="114,98,82,66,50,34">Sprite</li>
+<li data-word="SNOWSTORMNORM" data-path="255,254,253,252,251,250,249,248,247,246,245,244,243">Snowstorm Norm</li>
+<li data-word="THINMINT" data-path="26,25,24,23,22,21,20,19">Thin Mint</li>
+<li data-word="FROSTYTHEBOWMAN" data-path="174,173,172,171,170,169,168,167,166,165,164,163,162,161,160">Frosty the Bowman</li>
+</ul>
+</div>
+<div class="word-search-actions">
+<button class="button green" type="button" data-word-search-action="reveal">Show answers</button>
+<button class="button green" type="button" data-word-search-action="reset">Start over</button>
+</div>
+<p class="word-search-status" role="status" aria-live="polite">0 of 8 names found.</p>
+</section>
 </section>
 <section id="ask-santa" class="kids-panel" aria-labelledby="tab-santa">
 <h2>Ask Santa for a Blessing Box</h2>
