@@ -13,7 +13,15 @@ In repository Settings → Pages, select Deploy from a branch, main, and / (root
 - Full Chapter One sample
 - Family reading ideas and an interactive kindness prompt
 - Release information and FAQ
-- Release signup and reviews link to the existing author website; no data is collected by this site
+- Release signup links to the author website. Netlify Forms collects Christmas wishes, kit requests, and reader feedback on this site.
+
+## Form email delivery
+
+Verified Netlify Forms submissions are emailed to `santa@theblessingbox.com`. Christmas wishes and both kit request forms also copy the adult email address. Reader feedback uses the optional email as Reply-To.
+
+Verify a sending domain in Resend and create a sending API key. In the Netlify project’s environment variables, add the key as a Functions-scoped secret named `RESEND_API_KEY` and set `WISH_EMAIL_FROM` to a sender address on the verified domain. Redeploy after saving both settings. Keep form detection enabled in Netlify.
+
+The `submission-created` Netlify function sends these emails. If the project also has built-in Netlify email notifications for the same forms and inbox, those rules can send an additional copy.
 
 Expected release: November 15, 2026. No purchase link is shown until available.
 

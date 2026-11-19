@@ -91,10 +91,7 @@
 <p>Our first Christmas supply is limited. Submit a request and we’ll reply to confirm availability. You can also shop in person at one of our upcoming markets. <a href="https://livfullerauthor.netlify.app/upcoming-events.html">See upcoming events</a>.</p>
 </div>
 <hr class="kids-footer-divider" style="margin:24px auto">
-<form class="christmas-wish-form" name="christmas-wish" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="christmas-wish">
-<input type="hidden" name="wish-type" value="christmas-wish">
-<p hidden><label>Leave this field empty <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+<form class="christmas-wish-form">
 <fieldset id="blessing-box-source" class="blessing-box-source" style="max-width:740px;margin:20px auto;text-align:left">
 <legend style="text-align:left">Who wants to give the child <em>The Blessing Box Experience</em>? (choose one)</legend>
 <label><input type="radio" name="blessing-box-source" value="Santa" required> Santa</label>
@@ -153,7 +150,7 @@
 <p hidden><label>Leave this blank<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <div class="wish-field"><label for="reader-name">First name or pen name</label><input id="reader-name" name="reader-name" type="text" maxlength="100" required></div>
 <div class="wish-field"><label for="reader-city-state">City and state <span>(optional)</span></label><input id="reader-city-state" name="city-state" type="text" maxlength="150"></div>
-<div class="wish-field"><label for="reader-email">Email address <span>(optional)</span></label><input id="reader-email" name="email" type="email" autocomplete="email"></div>
+<div class="wish-field"><label for="reader-email">Email address <span>(optional)</span></label><input id="reader-email" name="email" type="email" maxlength="254" autocomplete="email"></div>
 <div class="wish-field"><label for="reader-review">Your review or comments</label><textarea id="reader-review" name="review" rows="6" maxlength="10000" required></textarea></div>
 <label class="wish-permission" for="quote-permission"><input id="quote-permission" name="quote-permission" type="checkbox" value="yes"><span>I give Liv permission to quote my review on this website using the first name or pen name above. If I’m submitting on behalf of a child, I am their parent or guardian and give that permission.</span></label>
 <p>Your feedback goes privately to Liv for review. Permission to quote is optional, and your email address will not be published.</p>

@@ -63,7 +63,8 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 /* Christmas decorations stay clear of all interactive content. */
 .welcome{position:relative;isolation:isolate}
 .snowfall{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
-.snowfall span{position:absolute;top:-12px;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#fff;box-shadow:0 0 2px #718ca6;opacity:0;animation:snow-drift var(--duration) var(--delay) linear infinite}
+.snowfall span{position:absolute;top:-16px;left:var(--x);color:#fff;font:calc(var(--size) + 8px)/1 'Apple Symbols','Segoe UI Symbol',sans-serif;text-shadow:0 0 2px #718ca6;opacity:0;animation:snow-drift var(--duration) var(--delay) linear infinite}
+.snowfall span::before{content:'\2744\FE0E'}
 @keyframes snow-drift{0%{transform:translate3d(0,-12px,0);opacity:0}8%{opacity:.65}90%{opacity:.65}100%{transform:translate3d(var(--drift),calc(100vh + 24px),0);opacity:0}}
 .snowfall.is-paused span{animation-play-state:paused}
 @media(max-width:720px){.snowfall span:nth-child(n+19){display:none}}
