@@ -8,6 +8,9 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 
 /* A two-door welcome, with direct links that work without JavaScript. */
 .welcome{min-height:100svh;display:flex;flex-direction:column;background:var(--cream)}
+.welcome-introduction{max-width:760px;margin:0 auto;padding:28px 24px 24px;text-align:center}
+.welcome-introduction p{margin-bottom:12px}
+.welcome-introduction-title{font:500 clamp(25px,3.5vw,38px)/1.2 'EB Garamond',Georgia,serif}
 .welcome-options{flex:1;display:grid;grid-template-columns:1fr 1fr}
 .welcome-option{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:38px 24px 46px;text-decoration:none;position:relative;transition:filter .2s}
 .welcome-adults{background:#9bbfe0;color:var(--ink)}
@@ -25,6 +28,8 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .welcome-adults .welcome-symbol{color:var(--ink)}
 .welcome-adults:focus-visible{outline-color:var(--ink)}
 @media(max-width:720px){
+ .welcome-introduction{padding:22px 18px 18px}
+ .welcome-introduction p:last-child{font-size:14px;line-height:1.55}
  .welcome-options{grid-template-columns:1fr}
  .welcome-kids{border-right:0;border-bottom:8px solid #003580}
  .welcome-option{padding:28px 20px 32px}
