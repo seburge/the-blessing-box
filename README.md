@@ -19,7 +19,7 @@ In repository Settings → Pages, select Deploy from a branch, main, and / (root
 
 Verified Netlify Forms submissions are emailed to `santa@theblessingbox.com`. Christmas wishes and both kit request forms also copy the adult email address. Reader feedback uses the optional email as Reply-To.
 
-Verify a sending domain in Resend and create a sending API key. In the Netlify project’s environment variables, add the key as a Functions-scoped secret named `RESEND_API_KEY` and set `WISH_EMAIL_FROM` to a sender address on the verified domain. Redeploy after saving both settings. Keep form detection enabled in Netlify.
+Verify a sending domain in Resend and create a sending API key. In the Netlify project’s environment variables, add the key as a Functions-scoped secret named `RESEND_API_KEY` and optionally set `WISH_EMAIL_FROM` to override the default sender, `The Blessing Box <santa@theblessingbox.com>`. Redeploy after saving the settings. Keep form detection enabled in Netlify.
 
 The `submission-created` Netlify function sends these emails. If the project also has built-in Netlify email notifications for the same forms and inbox, those rules can send an additional copy.
 

@@ -1,14 +1,21 @@
-const wishForm = document.querySelector('.christmas-wish-form');
-
-if (wishForm) {
+for (const wishForm of document.querySelectorAll('.christmas-wish-form, form[name="reader-feedback"]')) {
   const submitButton = wishForm.querySelector('button[type="submit"]');
-  const wishStatus = document.querySelector('.wish-status');
-  const sourceChoices = wishForm.querySelectorAll('input[name="blessing-box-source"]');
+  let wishStatus = wishForm.querySelector('.wish-status') || wishForm.nextElementSibling;
+  if (!wishStatus?.classList.contains('wish-status')) {
+    wishStatus = document.createElement('p');
+    wishStatus.className = 'wish-status';
+    wishStatus.setAttribute('role', 'status');
+    wishStatus.setAttribute('aria-live', 'polite');
+    wishForm.append(wishStatus);
+  }
+  const messageType = wishForm.name === 'christmas-wish' ? 'Christmas wish'
+    : wishForm.name === 'reader-feedback' ? 'feedback' : 'request';
+  const sourceChoices = wishForm.querySelectorAll('input[type="radio"][name="blessing-box-source"]');
   if (sourceChoices.length) {
     wishForm.addEventListener('submit', event => {
       event.preventDefault();
       if (!wishForm.reportValidity()) return;
-      const sourceChoice = wishForm.querySelector('input[name="blessing-box-source"]:checked');
+      const sourceChoice = wishForm.querySelector('input[type="radio"][name="blessing-box-source"]:checked');
       if (sourceChoice?.value === 'Santa') window.location.assign('from-santa.html');
       if (sourceChoice?.value === 'Someone other than Santa') window.location.assign('for-others.html');
     });
@@ -20,7 +27,7 @@ if (wishForm) {
 
     submitButton.disabled = true;
     wishForm.setAttribute('aria-busy', 'true');
-    wishStatus.textContent = 'Sending your Christmas wish…';
+    wishStatus.textContent = `Submitting your ${messageType}…`;
 
     try {
       const response = await fetch(wishForm.action, {
@@ -30,9 +37,9 @@ if (wishForm) {
       });
       if (!response.ok) throw new Error('Submission failed');
       wishForm.reset();
-      wishStatus.textContent = 'Your Christmas wish has been received. Thank you!';
+      wishStatus.textContent = `Your ${messageType} has been received. Thank you!`;
     } catch {
-      wishStatus.textContent = 'Your wish could not be sent. Please try again. Your answers are still here.';
+      wishStatus.textContent = `Your ${messageType} could not be submitted. Please try again. Your answers are still here.`;
     } finally {
       submitButton.disabled = false;
       wishForm.removeAttribute('aria-busy');

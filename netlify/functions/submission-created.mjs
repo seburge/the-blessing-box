@@ -76,9 +76,9 @@ export default async function handleSubmission(request) {
   }
 
   const apiKey = Netlify.env.get('RESEND_API_KEY');
-  const from = Netlify.env.get('WISH_EMAIL_FROM');
-  if (!apiKey || !from) {
-    throw new Error('Form email delivery requires RESEND_API_KEY and WISH_EMAIL_FROM');
+  const from = Netlify.env.get('WISH_EMAIL_FROM') || `The Blessing Box <${santaEmail}>`;
+  if (!apiKey) {
+    throw new Error('Form email delivery requires RESEND_API_KEY');
   }
   if (!id) throw new Error('Netlify submission ID is missing');
 
