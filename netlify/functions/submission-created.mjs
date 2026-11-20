@@ -16,27 +16,15 @@ const forms = new Map([
       ['christmas-wish', 'Christmas wish', 2000],
       ['would-give', 'What they would give', 2000],
       adultEmailField
-    ],
-    copyAdult: true
+    ]
   }],
   ['christmas-wish-from-santa', {
     subject: 'Blessing Box Experience Request from Santa',
-    fields: kitFields,
-    copyAdult: true
+    fields: kitFields
   }],
   ['blessing-box-for-others', {
     subject: 'Blessing Box Experience Request from Someone Other Than Santa',
-    fields: kitFields,
-    copyAdult: true
-  }],
-  ['reader-feedback', {
-    subject: 'The Blessing Box Reader Feedback',
-    fields: [
-      ['reader-name', 'First name or pen name', 100],
-      ['city-state', 'City and state', 150, { optional: true }],
-      ['email', 'Email address', 254, { optional: true }],
-      ['review', 'Review or comments', 10000]
-    ]
+    fields: kitFields
   }]
 ]);
 
@@ -51,18 +39,15 @@ export default async function handleSubmission(request) {
   const { payload: { id, form_name: formName, data } } = await request.json();
   const form = forms.get(formName);
   if (!form || data['bot-field']) return new Response(null, { status: 204 });
-  const santaUsesNetlify = Netlify.env.get('SANTA_FORM_NOTIFICATIONS') === 'true';
   const email = typeof data.email === 'string' ? data.email.trim() : '';
-  const copyAdult = form.copyAdult && email && email.toLowerCase() !== santaEmail;
-  if (santaUsesNetlify && !copyAdult) return new Response(null, { status: 204 });
+  if (!email || email.toLowerCase() === santaEmail) return new Response(null, { status: 204 });
   if (formName === 'christmas-wish' && data['adult-permission'] !== 'yes') {
     return new Response(null, { status: 204 });
   }
 
   const rows = [];
-  for (const [field, label, limit, { optional = false } = {}] of form.fields) {
+  for (const [field, label, limit] of form.fields) {
     const value = typeof data[field] === 'string' ? data[field].trim() : '';
-    if (!value && optional) continue;
     if (!value || value.length > limit) throw new Error(`Invalid field in ${formName}: ${field}`);
     rows.push([label, value]);
   }
@@ -70,11 +55,7 @@ export default async function handleSubmission(request) {
     throw new Error(`Invalid kit quantity in ${formName}`);
   }
   if (formName === 'christmas-wish') rows.push(['Adult permission to send the wish', 'Confirmed']);
-  if (formName === 'reader-feedback') {
-    rows.push(['Permission to quote the review', data['quote-permission'] === 'yes' ? 'Yes' : 'No']);
-  }
-
-  if (email && !/^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)+$/i.test(email)) {
+  if (!/^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)+$/i.test(email)) {
     throw new Error(`Invalid email address in ${formName}`);
   }
 
@@ -88,19 +69,13 @@ export default async function handleSubmission(request) {
   const intro = 'Submitted through The Blessing Box website.';
   const message = {
     from,
-    to: [santaUsesNetlify ? email : santaEmail],
+    to: [email],
+    reply_to: santaEmail,
     subject: form.subject,
     text: [form.subject, intro, ...rows.map(([label, value]) => `${label}\n${value}`)].join('\n\n'),
     html: `<h1>${escapeHTML(form.subject)}</h1><p>${intro}</p>`
       + rows.map(([label, value]) => `<h2>${escapeHTML(label)}</h2><p>${escapeHTML(value).replace(/\r?\n/g, '<br>')}</p>`).join('')
   };
-  if (santaUsesNetlify) {
-    message.reply_to = santaEmail;
-  } else {
-    if (email) message.reply_to = email;
-    if (copyAdult) message.cc = [email];
-  }
-
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
