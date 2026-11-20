@@ -17,11 +17,11 @@ In repository Settings → Pages, select Deploy from a branch, main, and / (root
 
 ## Form email delivery
 
-Verified Netlify Forms submissions are emailed to `santa@theblessingbox.com`. Christmas wishes and both kit request forms also copy the adult email address. Reader feedback uses the optional email as Reply-To.
+To route Santa’s mail the same way as the Liv Fuller author site, open the Netlify project’s **Forms → Submission notifications**. Add an **Email notification** for **Any form** to `santa@theblessingbox.com`. Confirm the address from Santa’s inbox if Netlify sends a confirmation request.
 
-Verify a sending domain in Resend and create a sending API key. In the Netlify project’s environment variables, add the key as a Functions-scoped secret named `RESEND_API_KEY` and optionally set `WISH_EMAIL_FROM` to override the default sender, `The Blessing Box <santa@theblessingbox.com>`. Redeploy after saving the settings. Keep form detection enabled in Netlify.
+Once that rule is active, set the Functions environment variable `SANTA_FORM_NOTIFICATIONS` to `true` for Production and deploy this code. The `submission-created` function then emails only the adult address entered on a Christmas wish or kit request, with Santa as Reply-To. Netlify handles delivery to Santa for all submitted forms, including reader feedback.
 
-The `submission-created` Netlify function sends these emails. If the project also has built-in Netlify email notifications for the same forms and inbox, those rules can send an additional copy.
+The adult copies use the existing `RESEND_API_KEY` and optional `WISH_EMAIL_FROM` settings. Until `SANTA_FORM_NOTIFICATIONS` is `true`, the function sends directly to Santa and copies the adult when applicable. Set this variable only after the Netlify rule is active to avoid interrupting delivery to Santa.
 
 Expected release: November 15, 2026. No purchase link is shown until available.
 

@@ -51,6 +51,10 @@ export default async function handleSubmission(request) {
   const { payload: { id, form_name: formName, data } } = await request.json();
   const form = forms.get(formName);
   if (!form || data['bot-field']) return new Response(null, { status: 204 });
+  const santaUsesNetlify = Netlify.env.get('SANTA_FORM_NOTIFICATIONS') === 'true';
+  const email = typeof data.email === 'string' ? data.email.trim() : '';
+  const copyAdult = form.copyAdult && email && email.toLowerCase() !== santaEmail;
+  if (santaUsesNetlify && !copyAdult) return new Response(null, { status: 204 });
   if (formName === 'christmas-wish' && data['adult-permission'] !== 'yes') {
     return new Response(null, { status: 204 });
   }
@@ -70,7 +74,6 @@ export default async function handleSubmission(request) {
     rows.push(['Permission to quote the review', data['quote-permission'] === 'yes' ? 'Yes' : 'No']);
   }
 
-  const email = typeof data.email === 'string' ? data.email.trim() : '';
   if (email && !/^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)+$/i.test(email)) {
     throw new Error(`Invalid email address in ${formName}`);
   }
@@ -85,14 +88,18 @@ export default async function handleSubmission(request) {
   const intro = 'Submitted through The Blessing Box website.';
   const message = {
     from,
-    to: [santaEmail],
+    to: [santaUsesNetlify ? email : santaEmail],
     subject: form.subject,
     text: [form.subject, intro, ...rows.map(([label, value]) => `${label}\n${value}`)].join('\n\n'),
     html: `<h1>${escapeHTML(form.subject)}</h1><p>${intro}</p>`
       + rows.map(([label, value]) => `<h2>${escapeHTML(label)}</h2><p>${escapeHTML(value).replace(/\r?\n/g, '<br>')}</p>`).join('')
   };
-  if (email) message.reply_to = email;
-  if (form.copyAdult && email && email.toLowerCase() !== santaEmail) message.cc = [email];
+  if (santaUsesNetlify) {
+    message.reply_to = santaEmail;
+  } else {
+    if (email) message.reply_to = email;
+    if (copyAdult) message.cc = [email];
+  }
 
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
