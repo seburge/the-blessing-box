@@ -103,6 +103,10 @@ header{background:var(--green);color:var(--cream);max-width:none}header .wordmar
 .kids-panel h2{font-size:clamp(36px,5vw,52px)}
 @media(max-width:720px){.kids-page{padding:24px 10px 45px}.kids-tabs{gap:3px}.kids-tabs a{flex:1 0 120px;min-height:64px;height:auto;padding:10px 6px;font-size:clamp(11px,2.5vw,14px);line-height:1.25}.kids-page h1{font-size:clamp(38px,12vw,56px)}.kids-panel{padding:24px 6px}.kids-panel h2{font-size:clamp(34px,10vw,48px)}.parents-description,.parents-introduction{padding-inline:6px}.parents-buy-link{justify-content:center;padding-inline:10px}.kids-footer-divider{width:calc(100% - 20px)}}
 
+.parents-tabs{flex-wrap:wrap;gap:0 8px;border-bottom:1px solid #9bbfe0;overflow:visible}
+.parents-tabs a{flex:0 1 auto;min-height:44px;height:auto;padding:6px 8px;background:transparent;color:#003580;font-size:15px;text-decoration:underline;text-underline-offset:3px}
+.parents-tabs a[aria-selected="true"]{background:transparent;color:var(--ink);text-decoration-thickness:3px}
+
 .kids-panel .books-page-cover{display:block;width:240px;max-width:100%;height:auto;margin:24px auto}
 .kids-panel .book-buy-button{display:inline-block;margin-bottom:24px}
 .kids-panel .book-buy-button img{display:block;max-width:100%;height:auto}
