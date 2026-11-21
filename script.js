@@ -58,7 +58,7 @@ if (adultAgeCheck && birthYear) {
       window.location.assign('santas-big-helpers.html');
       return;
     }
-    window.location.assign('for-parents.html#parents-about');
+    window.location.assign('for-parents.html');
   });
 }
 
