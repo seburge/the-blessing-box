@@ -7,6 +7,8 @@
 <title>For Kids | The Blessing Box</title>
 <link rel="stylesheet" href="styles.css?v=book-credits-1">
 <script src="script.js?v=game-links-1" defer></script>
+<link rel="stylesheet" href="puppy-game.css?v=13">
+<script src="puppy-game.js?v=7" defer></script>
 <script src="crossword.js?v=1" defer></script>
 <script src="word-search.js?v=1" defer></script>
 <script src="christmas-wish.js?v=1" defer></script>
@@ -90,6 +92,7 @@
 <div class="game-links">
 <a class="button green" href="#word-search-title">Elfecutive Council Word Search</a>
 <a class="button green" href="#crossword-title">Fun Fact Crossward</a>
+<a class="button green" href="#puppy-game-title">Find the Blessing Box Buddy</a>
 </div>
 <section class="elfecutive-word-search" aria-labelledby="word-search-title">
 <h3 id="word-search-title">Elfecutive Council Word Search</h3>
@@ -486,6 +489,53 @@
 <button class="button green" type="button" data-crossword-action="clear">Clear grid</button>
 </div>
 <p class="crossword-status" role="status" aria-live="polite"></p>
+</section>
+<section class="puppy-game" aria-labelledby="puppy-game-title">
+<h3 id="puppy-game-title">Find the Blessing Box Buddy</h3>
+<p>Watch the puppy hide in one of three presents. Follow its box as the presents trade places, then pick where you think the puppy is hiding!</p>
+<div class="puppy-presents">
+<button class="puppy-box" type="button" aria-label="Present 1" disabled>
+<span class="puppy-box-art" aria-hidden="true">
+<span class="puppy-box-opening"></span>
+<img class="puppy-tail" src="assets/puppy-tail.png?v=4" alt="" loading="lazy">
+<img class="puppy-sprite" src="assets/puppy-game.png" alt="" loading="lazy">
+<img class="puppy-sprite puppy-sprite-pout" src="assets/puppy-pout.png" alt="" loading="lazy">
+<span class="puppy-box-front"><span class="puppy-box-side"></span></span>
+<span class="puppy-box-lid"><span class="puppy-lid-paper"></span><span class="puppy-bow-tails"></span><span class="puppy-box-bow"></span></span>
+</span>
+</button>
+<button class="puppy-box" type="button" aria-label="Present 2" disabled>
+<span class="puppy-box-art" aria-hidden="true">
+<span class="puppy-box-opening"></span>
+<img class="puppy-tail" src="assets/puppy-tail.png?v=4" alt="" loading="lazy">
+<img class="puppy-sprite" src="assets/puppy-game.png" alt="" loading="lazy">
+<img class="puppy-sprite puppy-sprite-pout" src="assets/puppy-pout.png" alt="" loading="lazy">
+<span class="puppy-box-front"><span class="puppy-box-side"></span></span>
+<span class="puppy-box-lid"><span class="puppy-lid-paper"></span><span class="puppy-bow-tails"></span><span class="puppy-box-bow"></span></span>
+</span>
+</button>
+<button class="puppy-box" type="button" aria-label="Present 3" disabled>
+<span class="puppy-box-art" aria-hidden="true">
+<span class="puppy-box-opening"></span>
+<img class="puppy-tail" src="assets/puppy-tail.png?v=4" alt="" loading="lazy">
+<img class="puppy-sprite" src="assets/puppy-game.png" alt="" loading="lazy">
+<img class="puppy-sprite puppy-sprite-pout" src="assets/puppy-pout.png" alt="" loading="lazy">
+<span class="puppy-box-front"><span class="puppy-box-side"></span></span>
+<span class="puppy-box-lid"><span class="puppy-lid-paper"></span><span class="puppy-bow-tails"></span><span class="puppy-box-bow"></span></span>
+</span>
+</button>
+</div>
+<p class="puppy-game-status" role="status">Start a round to see where the puppy hides.</p>
+<div class="puppy-game-controls">
+<label for="puppy-mode">Difficulty</label>
+<select id="puppy-mode">
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
+<option value="impossible">Impossible</option>
+</select>
+<button class="button green puppy-start" type="button">Start round</button>
+</div>
 </section>
 </section>
 <section id="ask-santa" class="kids-panel" aria-labelledby="tab-santa">
