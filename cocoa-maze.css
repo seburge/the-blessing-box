@@ -1,0 +1,59 @@
+.cocoa-maze {
+  margin-block: 2rem;
+  padding: clamp(.8rem, 3vw, 1.75rem);
+  border: 1px solid #bdcddd;
+  border-radius: 1rem;
+  background: #f5f9ff;
+}
+
+.cocoa-maze h3 {
+  margin-top: 0;
+}
+
+.cocoa-maze-illustration {
+  width: min(100%, 16rem);
+  height: auto;
+  margin: .75rem auto 1rem;
+  border-radius: .5rem;
+}
+
+.cocoa-maze-board {
+  display: block;
+  width: min(100%, 46.5rem);
+  height: auto;
+  margin: 1rem auto;
+  border-radius: .5rem;
+  background: #fffdf4;
+  touch-action: manipulation;
+}
+
+.cocoa-maze-controls,
+.cocoa-maze-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .45rem;
+}
+
+.cocoa-maze-controls button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid #294381;
+  border-radius: .4rem;
+  background: #fff;
+  color: #294381;
+  font: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.cocoa-maze :focus-visible {
+  outline: 3px solid #147c8a;
+  outline-offset: 3px;
+}
+
+.cocoa-maze-status {
+  min-height: 1.5em;
+  margin: .75rem 0;
+  font-weight: 700;
+}

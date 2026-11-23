@@ -100,6 +100,8 @@ if (kidsTabs) {
       event.preventDefault();
       selectTab(tab);
       history.replaceState(null, '', tab.hash);
+      const scrollTarget = tab.dataset.scrollTarget;
+      if (scrollTarget) document.getElementById(scrollTarget)?.scrollIntoView();
     });
     tab.addEventListener('keydown', event => {
       const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
@@ -116,7 +118,10 @@ if (kidsTabs) {
   });
   const selectLinkedTab = () => {
     const target = document.getElementById(window.location.hash.slice(1));
-    const panelIndex = panels.findIndex(panel => target && panel.contains(target));
+    const panelTarget = target?.dataset.panel
+      ? document.getElementById(target.dataset.panel)
+      : target;
+    const panelIndex = panels.findIndex(panel => panelTarget && panel.contains(panelTarget));
     selectTab(tabs[panelIndex] || tabs[0]);
     if (target && panelIndex >= 0) target.scrollIntoView();
   };
@@ -124,7 +129,14 @@ if (kidsTabs) {
   selectLinkedTab();
 
   const parentsBuyLink = document.querySelector('.parents-buy-link');
-  if (parentsBuyLink) {
+  const overviewBuyLink = document.querySelector('.parents-overview-buy-link');
+  if (parentsBuyLink && overviewBuyLink) {
+    const buyButton = overviewBuyLink.firstElementChild;
+    const inlineBuyLinks = {
+      '#parents-about': overviewBuyLink,
+      '#parents-meet-book': document.getElementById('parents-book-buy-link'),
+      '#parents-readers': document.getElementById('parents-readers-buy-link')
+    };
     const updateParentsBuyLink = () => {
       const selectedTab = tabs.find(tab => tab.getAttribute('aria-selected') === 'true');
       const hiddenTabs = [
@@ -133,7 +145,10 @@ if (kidsTabs) {
         '#parents-ask-santa',
         '#parents-faq'
       ];
-      parentsBuyLink.hidden = hiddenTabs.includes(selectedTab?.hash);
+      const inlineDestination = inlineBuyLinks[selectedTab?.hash];
+      const destination = inlineDestination || parentsBuyLink;
+      if (buyButton.parentElement !== destination) destination.append(buyButton);
+      parentsBuyLink.hidden = Boolean(inlineDestination) || hiddenTabs.includes(selectedTab?.hash);
     };
     tabs.forEach(tab => tab.addEventListener('click', updateParentsBuyLink));
     window.addEventListener('hashchange', updateParentsBuyLink);

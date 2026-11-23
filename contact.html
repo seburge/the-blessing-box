@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#294381">
+<meta name="description" content="Contact Liv Fuller or Quincy Battieste, the author and illustrator of The Blessing Box.">
+<title>Contact Liv or Quincy | The Blessing Box</title>
+<link rel="stylesheet" href="styles.css?v=contact-2">
+<script src="contact.js?v=1" defer></script>
+</head>
+<body class="helpers-page">
+<a class="skip" href="#main">Skip to content</a>
+<a href="index.html" aria-label="The Blessing Box home"><img class="home-banner" src="assets/blessing-box-banner.jpg" alt="The Blessing Box" width="2157" height="409"></a>
+<main id="main" class="kids-page">
+<h1>Contact Liv or Quincy</h1>
+<p class="parents-description">Send a message to Liv or Quincy, or connect with them online.</p>
+<article class="book-description" style="max-width:740px;margin-inline:auto;text-align:left">
+<section id="message-form" aria-labelledby="message-form-heading">
+<h2 id="message-form-heading">Message Form</h2>
+<details>
+<summary class="button green">Open the message form</summary>
+<p>Choose Liv or Quincy and tell us how we can help.</p>
+<form id="contact-form" class="christmas-wish-form" method="post" action="/.netlify/functions/send-contact">
+<p hidden><label>Leave this blank<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="wish-field">
+<label for="recipient">Who would you like to contact?</label>
+<select id="recipient" name="recipient" required>
+<option value="">Choose a recipient</option>
+<option value="Liv Fuller">Liv Fuller</option>
+<option value="Quincy Battieste">Quincy Battieste</option>
+</select>
+</div>
+<div class="wish-field">
+<label for="name">Name <span>(optional)</span></label>
+<input id="name" name="name" autocomplete="name" maxlength="120">
+</div>
+<div class="wish-field">
+<label for="email">Email address</label>
+<input id="email" type="email" name="email" autocomplete="email" maxlength="254" required>
+</div>
+<div class="wish-field">
+<label for="topic">What would you like to discuss?</label>
+<select id="topic" name="topic">
+<option>Reader message</option>
+<option>School or library visit inquiry</option>
+<option>Interview or media inquiry</option>
+<option>Illustration or design inquiry</option>
+<option>Freelance or creative collaboration</option>
+<option>Other</option>
+</select>
+</div>
+<div class="wish-field">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="6" maxlength="5000" required></textarea>
+</div>
+<p>Please have an adult complete this form. Read <a href="privacy.html">how your information is used</a>.</p>
+<button class="button green" type="submit">Send message</button>
+<p id="contact-status" role="status"></p>
+</form>
+</details>
+</section>
+<div id="liv"><h2>Follow Liv</h2><div class="social-icons" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:18px 0 30px"><a href="https://www.instagram.com/livfullerauthor/" aria-label="Liv Fuller on Instagram" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></a><a href="https://x.com/AuthorLiv" aria-label="Liv Fuller on X" title="X" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l8.2-9.4L.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L6.3 3.9H4.5L17.8 20Z"/></svg></a><a href="https://www.facebook.com/liv.fuller.77736" aria-label="Liv Fuller on Facebook" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-3H14V8c0-.9.3-1.5 1.5-1.5H18V3.2c-.4-.1-1.8-.2-3-.2-3 0-5 1.8-5 5v2H7v3h3v9h4Z"/></svg></a><a href="https://www.pinterest.com/livfullerauthor/" aria-label="Liv Fuller on Pinterest" title="Pinterest" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.5-.3 1.1.6 2 1.7 2 2 0 3.5-2.1 3.5-5.1 0-2.7-1.9-4.5-4.6-4.5-3.1 0-4.9 2.3-4.9 4.7 0 .9.3 1.9.8 2.4l-.3 1.3c0 .2-.2.3-.5.2-1.4-.7-2.3-2.6-2.3-4.2 0-3.4 2.5-6.5 7.3-6.5 3.8 0 6.8 2.7 6.8 6.3 0 3.8-2.4 6.9-5.7 6.9-1.1 0-2.2-.6-2.6-1.3l-.7 2.6c-.2 1-.9 2-1.3 2.8A10 10 0 1 0 12 2Z"/></svg></a></div></div>
+<div id="quincy"><h2>Follow Quincy</h2><div class="social-icons" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:18px 0 30px"><a href="https://www.themousepatrol.com/" aria-label="Quincy Battieste’s website" title="Website" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg></a><a href="https://www.instagram.com/themousepatrol/" aria-label="Quincy Battieste on Instagram" title="Instagram @themousepatrol" style="display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;color:#294381"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+<div class="kids-book-actions">
+<a class="button green" href="for-parents.html#parents-top">Return to For Parents</a>
+<a class="button green" href="index.html">Return to Home Page</a>
+</div>
+</article>
+</main>
+<hr class="kids-footer-divider">
+<footer>
+<a class="footer-box" href="index.html" aria-label="The Blessing Box home"><img src="assets/blessing-box-footer-transparent.png" alt="The sapphire blue Blessing Box decorated with stars and snowflakes" width="1535" height="1024" loading="lazy"></a>
+<p class="footer-copyright">© 2026 The Blessing Box, LLC<br><a href="https://livfullerauthor.netlify.app/">To learn more about the author, visit livfullerauthor.com</a><br>Illustrations by Quincy Battieste</p>
+<a class="footer-author-logo" href="https://livfullerauthor.netlify.app/" aria-label="Liv Fuller’s author website"><img src="assets/liv-fuller-footer-logo.png" alt="Liv Fuller Author. Always be you." width="1254" height="1254" loading="lazy"></a>
+</footer>
+</body>
+</html>

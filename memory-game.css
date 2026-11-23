@@ -1,0 +1,117 @@
+.memory-game {
+  margin-block: 2rem;
+  padding: clamp(.65rem, 3vw, 1.75rem);
+  border: 1px solid #bdcddd;
+  border-radius: 1rem;
+  background: #f5f9ff;
+}
+
+.memory-game h3 {
+  margin-top: 0;
+}
+
+.memory-game-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.35rem, 1.4vw, .9rem);
+  max-width: 38rem;
+  margin: 1rem auto;
+}
+
+.memory-card {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  min-width: 0;
+  padding: 0;
+  border: 2px solid #294381;
+  border-radius: .5rem;
+  background: #294381;
+  color: #fffdf4;
+  font: inherit;
+  cursor: pointer;
+}
+
+.memory-card-back,
+.memory-card-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: .18rem;
+  border-radius: .32rem;
+}
+
+.memory-card-back {
+  background: #fff;
+}
+
+.memory-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.memory-card-face {
+  visibility: hidden;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: .14rem;
+  background: #fffdf4;
+  color: #172b4c;
+  font: 700 clamp(.7rem, 2.6vw, 1.08rem)/1.12 'DM Sans', sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.memory-card-artwork {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: .25rem;
+  background: #16294c;
+}
+
+.memory-card-artwork img {
+  position: absolute;
+  top: calc(-100% * var(--art-top) / var(--art-height));
+  left: 50%;
+  width: auto;
+  height: calc(100% / var(--art-height));
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.memory-card[data-state="up"] .memory-card-back,
+.memory-card[data-state="matched"] .memory-card-back {
+  visibility: hidden;
+}
+
+.memory-card[data-state="up"] .memory-card-face,
+.memory-card[data-state="matched"] .memory-card-face {
+  visibility: visible;
+}
+
+.memory-card[data-state="matched"] {
+  border-color: #26704f;
+}
+
+.memory-card[data-state="matched"] .memory-card-face {
+  background: #e3f4ea;
+}
+
+.memory-card:focus-visible,
+.memory-game-reset:focus-visible {
+  outline: 3px solid #147c8a;
+  outline-offset: 2px;
+}
+
+.memory-game-status {
+  min-height: 1.5em;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .memory-game-board {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

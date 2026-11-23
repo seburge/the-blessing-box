@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#294381">
 <title>For Kids | The Blessing Box</title>
-<link rel="stylesheet" href="styles.css?v=book-credits-1">
-<script src="script.js?v=game-links-1" defer></script>
-<link rel="stylesheet" href="puppy-game.css?v=13">
+<link rel="stylesheet" href="styles.css?v=kids-book-actions-1&amp;footer=2">
+<script src="script.js?v=kids-book-scroll-1" defer></script>
+<link rel="stylesheet" href="puppy-game.css?v=14">
 <script src="puppy-game.js?v=7" defer></script>
+<link rel="stylesheet" href="cocoa-maze.css?v=2">
+<script src="cocoa-maze.js?v=2" defer></script>
+<link rel="stylesheet" href="memory-game.css?v=6">
+<script src="memory-game.js?v=6" defer></script>
 <script src="crossword.js?v=1" defer></script>
 <script src="word-search.js?v=1" defer></script>
 <script src="christmas-wish.js?v=1" defer></script>
@@ -18,15 +22,14 @@
 <a href="index.html" aria-label="The Blessing Box home"><img class="home-banner" src="assets/blessing-box-banner.jpg" alt="The Blessing Box" width="2157" height="409" fetchpriority="high"></a>
 <main id="main" class="kids-page">
 <h1>For Kids</h1>
-<nav class="kids-tabs" aria-label="Explore For Kids">
-<a id="tab-book" href="#meet-the-book">Meet the Book</a>
-<a id="tab-paws" href="#paws-bookmarks">Bookmarks &amp;<br>Paw Prints</a>
-<a id="tab-games" href="#games">Games</a>
-<a id="tab-santa" href="#ask-santa">Ask for a Blessing Box</a>
-<a href="index.html">Return to Home Page</a>
+<nav class="kids-tabs kids-menu" aria-label="Explore For Kids">
+<a id="tab-book" href="#meet-the-book" data-scroll-target="kids-book-heading">Meet the Book</a>
+<a id="tab-paws" href="#paws-bookmarks" data-scroll-target="kids-bookmarks-heading">Bookmarks &amp; Paw Prints</a>
+<a id="tab-games" href="#games" data-scroll-target="kids-games-heading">Games</a>
+<a id="tab-santa" href="#ask-santa" data-scroll-target="kids-santa-heading">Ask for a Blessing Box</a>
 </nav>
 <section id="meet-the-book" class="kids-panel" aria-labelledby="tab-book">
-<h2>Meet the Book</h2><article><div class="book-title-row"><h3><em>The Blessing Box</em></h3><p class="book-byline">By Liv Fuller</p><p class="book-illustrator">Illustrated by Quincy Battieste</p></div><img class="book-illustration books-page-cover" src="assets/blessing-box-front-cover.webp" alt="Front cover of The Blessing Box by Liv Fuller" width="800" height="1246">
+<h2 id="kids-book-heading">Meet the Book</h2><article><div class="book-title-row"><h3><em>The Blessing Box</em></h3><p class="book-byline">By Liv Fuller</p><p class="book-illustrator">Illustrated by Quincy Battieste</p></div><img class="book-illustration books-page-cover" src="assets/blessing-box-front-cover.webp" alt="Front cover of The Blessing Box by Liv Fuller" width="800" height="1246">
 <div class="book-description" style="max-width:740px;margin-inline:auto;text-align:left">
 <p>All Hugh wants for Christmas is a dog, but an out-of-sorts Santa has something else in mind—an idea his elves think is nuttier than a fruitcake.</p>
 <p>When Hugh opens Santa’s unusual gift, the Blessing Box, his dream of a dog of his own crumbles like a Christmas cookie. But Hugh soon realizes the mystical box isn’t empty after all. It holds an invisible key called opportunity—one that could help him prove to his parents he’s ready for a dog.</p>
@@ -35,13 +38,18 @@
 <p>When an unexpected accident forces Hugh to confront a life-or-death decision, he may have to sacrifice everything he has worked so hard for.</p>
 <p>And if that happens, Santa’s elves fear that Santa may never come down a chimney again.</p>
 <p>Come with Hugh on this magical adventure about friendship, the courage to be your true self, and the amazing discovery that sometimes the greatest gifts are the ones we give from the heart.</p>
-<section class="feature"><h3>Read Chapter Two</h3><p>Read “A Stinky Afternoon,” Chapter Two of <em>The Blessing Box</em>.</p><p><a class='button green' href="chapter-two.html">Read Chapter Two</a></p></section>
+<section class="feature"><h3>Read Chapter Two</h3><p>Read “A Stinky Afternoon,” Chapter Two of <em>The Blessing Box</em>.</p>
+<div class="kids-book-actions">
+<a class="button green" href="chapter-two.html">Read Chapter Two</a>
+<a class="button green" href="kids.html">Return to For Kids</a>
+<a class="button green" href="index.html">Return to Home Page</a>
+</div></section>
 </div></article>
 
 
 </section>
 <section id="paws-bookmarks" class="kids-panel" aria-labelledby="tab-paws">
-<h2>Bookmarks &amp; Paw Prints</h2>
+<h2 id="kids-bookmarks-heading">Bookmarks &amp; Paw Prints</h2>
 <p>Meet the characters in <em>The Blessing Box</em>. If you have a Blessing Box bookmark, you’ll find hidden paw prints on its front. Check below to see if you found them all.</p>
 <h3>Which Blessing Box bookmark do you have?</h3>
 <div class="bookmark-buttons">
@@ -86,18 +94,25 @@
     <a class="button green" href="bookmark-frosty-the-bowman.html">Frosty the Bowman</a>
   </div>
 </div>
+<div class="kids-book-actions">
+<a class="button green" href="kids.html">Return to For Kids</a>
+<a class="button green" href="index.html">Return to Home Page</a>
+</div>
 </section>
 <section id="games" class="kids-panel" aria-labelledby="tab-games">
-<h2>Games</h2>
+<h2 id="kids-games-heading">Games</h2>
 <div class="game-links">
 <a class="button green" href="#word-search-title">Elfecutive Council Word Search</a>
 <a class="button green" href="#crossword-title">Fun Fact Crossward</a>
 <a class="button green" href="#puppy-game-title">Find the Blessing Box Buddy</a>
+<a class="button green" href="#cocoa-maze-title">Frank's Hot-Cocoa Hunt</a>
+<a class="button green" href="#memory-game-title">Mistletoe Mister's Memory Game</a>
 </div>
+<hr class="game-divider">
 <section class="elfecutive-word-search" aria-labelledby="word-search-title">
 <h3 id="word-search-title">Elfecutive Council Word Search</h3>
-<p>In <em>The Blessing Box</em>, Santa appoints eight elves to serve on his Elfecutive Council, led by Everly Grace, CElfO. See if you can find all eight.</p>
-<p id="word-search-instructions">Find all eight names. Select the first letter, then the last letter of a name. Names can run across, down, diagonally, or backward. Spaces are left out.</p>
+<p>In <em>The Blessing Box</em>, eight elfecutives serve on Santa's elfecutive council.<br>Everly Grace, CElfO, challenges you to find all eight names.</p>
+<p id="word-search-instructions">Select the first letter, then the last letter of a name. Names can run across, down, diagonally, or backward. Spaces are left out.</p>
 <p class="word-search-keyboard">You can also use the arrow keys to move and Enter or Space to select a letter.</p>
 <div class="word-search-layout">
 <div class="word-search-scroll" role="region" aria-label="Elfecutive Council letter grid" tabindex="0">
@@ -492,6 +507,7 @@
 </section>
 <section class="puppy-game" aria-labelledby="puppy-game-title">
 <h3 id="puppy-game-title">Find the Blessing Box Buddy</h3>
+<img class="puppy-game-illustration" src="assets/puppy-in-the-box.jpg" alt="A puppy whimpers and peeks out of a ribbon-tied present" width="760" height="760" loading="lazy">
 <p>Watch the puppy hide in one of three presents. Follow its box as the presents trade places, then pick where you think the puppy is hiding!</p>
 <div class="puppy-presents">
 <button class="puppy-box" type="button" aria-label="Present 1" disabled>
@@ -529,17 +545,49 @@
 <div class="puppy-game-controls">
 <label for="puppy-mode">Difficulty</label>
 <select id="puppy-mode">
-<option value="easy">Easy</option>
-<option value="medium">Medium</option>
-<option value="hard">Hard</option>
-<option value="impossible">Impossible</option>
+<option value="easy">Slow as a Sloth (Easy)</option>
+<option value="medium">Pace of Winter Quest (Medium)</option>
+<option value="hard">In a Blink of Missy's Eye (Hard)</option>
+<option value="impossible">Fast like Santa's Sleigh (Impossible)</option>
 </select>
 <button class="button green puppy-start" type="button">Start round</button>
 </div>
 </section>
+<hr class="game-divider">
+<section class="cocoa-maze" aria-labelledby="cocoa-maze-title">
+<h3 id="cocoa-maze-title">Frank's Hot-Cocoa Hunt</h3>
+<img class="cocoa-maze-illustration" src="assets/frank-hot-cocoa.jpg" alt="Frank holding a steaming snowman mug of hot cocoa" width="760" height="760" loading="lazy">
+<p id="cocoa-maze-instructions">Guide the blue tracker from the whipped cream to the golden star on the snowman mug’s handle. Use the arrow keys on the maze, tap along a straight passage, or use the direction buttons.</p>
+<canvas class="cocoa-maze-board" width="648" height="648" tabindex="0" aria-label="Snowman-shaped hot cocoa maze board" aria-describedby="cocoa-maze-instructions">This maze needs a browser that supports canvas.</canvas>
+<div class="cocoa-maze-controls" role="group" aria-label="Maze direction controls">
+<button type="button" data-maze-move="0" aria-label="Move up">&#8593;</button>
+<button type="button" data-maze-move="3" aria-label="Move left">&#8592;</button>
+<button type="button" data-maze-move="2" aria-label="Move down">&#8595;</button>
+<button type="button" data-maze-move="1" aria-label="Move right">&#8594;</button>
+</div>
+<p class="cocoa-maze-status" role="status">Start at the top of the whipped cream.</p>
+<div class="cocoa-maze-actions">
+<button class="button green" type="button" data-maze-reset>Restart maze</button>
+<button class="button green" type="button" data-maze-new>New maze</button>
+</div>
+</section>
+<hr class="game-divider">
+<section class="memory-game" aria-labelledby="memory-game-title">
+<h3 id="memory-game-title">Mistletoe Mister's Memory Game</h3>
+<p id="memory-game-instructions">Flip two cards to find matching bookmark characters. Find all ten pairs to win!</p>
+<div class="memory-game-board" role="group" aria-label="Memory cards" aria-describedby="memory-game-instructions"></div>
+<p class="memory-game-timer">Time: <span>0:00</span></p>
+<p class="memory-game-status" role="status">0 of 10 pairs found.</p>
+<button class="button green memory-game-reset" type="button">Shuffle and play again</button>
+<noscript><p>Turn on JavaScript to play the memory game.</p></noscript>
+</section>
+<div class="kids-book-actions">
+<a class="button green" href="kids.html">Return to For Kids</a>
+<a class="button green" href="index.html">Return to Home Page</a>
+</div>
 </section>
 <section id="ask-santa" class="kids-panel" aria-labelledby="tab-santa">
-<h2>Ask for a Blessing Box</h2>
+<h2 id="kids-santa-heading">Ask for a Blessing Box</h2>
 <p class="santa-introduction">In <em>The Blessing Box</em>, all Hugh wants for Christmas is a dog. But an out-of-sorts Santa has something else in mind. Santa's mysterious gift, the Blessing Box, challenges Hugh to work for what he wants.</p>
 <p class="santa-introduction">Hugh doesn't like it one bit, until he realizes it may be just the thing to help him prove to his parents he is ready for a dog of his own. So, Hugh pet sits, mows lawns, earns his allowance, and works as hard as he can to make his dream come true.</p>
 <p class="santa-introduction">Hugh has always known Christmas is about receiving gifts, but during his Blessing Box adventure, he learns Christmas is also about giving from the heart. Is there anything you really want for Christmas? What would you give to have it? If you want to ask Santa for a Blessing Box challenge, please ask your parent or an adult to provide their email address and approve you sending your wish below.</p>
@@ -570,9 +618,11 @@
 <button class="button green" type="submit">Send my Christmas wish to Santa</button>
 </form>
 <p class="wish-status" role="status" aria-live="polite"></p>
+<div class="kids-book-actions">
+<a class="button green" href="kids.html">Return to For Kids</a>
+<a class="button green" href="index.html">Return to Home Page</a>
+</div>
 </section>
-
-<p class="kids-home-link"><a class="button green" href="kids.html">Return to For Kids</a></p>
 </main>
 <hr class="kids-footer-divider">
 <footer>
