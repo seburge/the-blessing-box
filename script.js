@@ -143,7 +143,8 @@ if (kidsTabs) {
         '#parents-meet-author',
         '#parents-meet-illustrator',
         '#parents-ask-santa',
-        '#parents-faq'
+        '#parents-faq',
+        '#parents-merch'
       ];
       const inlineDestination = inlineBuyLinks[selectedTab?.hash];
       const destination = inlineDestination || parentsBuyLink;
